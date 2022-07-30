@@ -1,0 +1,19 @@
+<view class="detail-container">
+  <swiper indicator-dots indicator-color="white" indicator-active-color="#ecf244">
+    <swiper-item><image data-index="0" src="/images/IMG_5750.jpg"></image></swiper-item>
+    <swiper-item><image data-index="1" src="/images/IMG_5751.jpg"></image></swiper-item>
+    <swiper-item><image data-index="2" src="/images/IMG_5757.jpg"></image></swiper-item>
+    <swiper-item><image data-index="3" src="/images/IMG_5763.jpg"></image></swiper-item>
+  </swiper>
+
+  <view>  
+    <ul wx:for="{{house1}}" wx:key="{{index}}">
+      <view>
+        <li>{{item.value}}</li>
+      </view>
+    </ul>
+  </view>
+
+  <button type="primary">申请房源</button>
+  
+</view>

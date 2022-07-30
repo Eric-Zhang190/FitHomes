@@ -1,0 +1,23 @@
+<!--pages/list/list.wxml-->
+<import src="/pages/template/template.wxml" />
+
+<view>
+  <view class="page-section">
+    <view class="page-section-title">房源</view>
+    <view class="weui-cells weui-cells_after-title">
+      <radio-group bindchange="radioChange">
+        <label class="weui-cell weui-check__label" wx:for="{{items}}" wx:key="{{item.value}}">
+            <radio value="{{item.value}}" checked="{{item.checked}}"/>
+            {{item.name}}
+        </label>
+      </radio-group>
+    </view>
+  </view>
+
+  <block wx:for="{{listArr}}" wx:key="{{index}}">
+    <view catchtap="toDetails">
+      <template is='listTmp'  data="{{...item}}"/>
+    </view>
+  </block>
+  
+</view>

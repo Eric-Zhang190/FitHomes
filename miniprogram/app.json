@@ -1,6 +1,10 @@
 {
   "pages": [
-    "pages/homepage/homepage"
+    "pages/details/details",
+    "pages/homepage/homepage",
+    "pages/list/list",
+    "pages/appication/appication",
+    "pages/template/template"
   ],
   "window": {
     "backgroundColor": "#F6F6F6",
@@ -10,5 +14,21 @@
     "navigationBarTextStyle": "black"
   },
   "sitemapLocation": "sitemap.json",
-  "style": "v2"
+  "style": "v2",
+  "tabBar": {
+    "list": [
+      {
+        "pagePath": "pages/homepage/homepage",
+        "text": "主页",
+        "iconPath": "/icon/home.jpg",
+        "selectedIconPath": "/icon/home2.jpg"
+      },
+      {
+        "pagePath": "pages/list/list",
+        "text": "房源",
+        "iconPath": "/icon/details.png",
+        "selectedIconPath": "/icon/details.png"
+      }
+    ]
+  }
 }

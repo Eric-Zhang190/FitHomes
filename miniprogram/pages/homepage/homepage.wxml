@@ -1,2 +1,26 @@
-<!--pages/homepage/homepage.wxml-->
-<text>pages/homepage/homepage.wxml</text>
+<!-- 搜索框 -->
+<view>
+  <image class="fit-img" src="../../images/FitIcon.jpg"></image>
+</view>
+
+<view>
+  <ul>
+    <view>
+      <li>text2</li>
+    </view>
+    <view>
+      <li>text2</li>
+    </view>   <view>
+      <li>text2</li>
+    </view>
+  </ul>
+</view>
+
+
+
+
+
+
+
+
+

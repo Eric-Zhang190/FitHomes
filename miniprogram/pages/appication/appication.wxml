@@ -21,180 +21,210 @@
   <view class="page-body">
     <form catchsubmit="formSubmit" catchreset="formReset" class="form-body">
       <view class="form-section-title">
-          <text >基本信息(必填)</text>
-        </view>
-      
-      <view class="form-section">
-      
-      <view class="page-section">
-        <view class="page-section-title">房屋类型</view>
-        <radio-group name="房屋类型">
-          <label><radio class="radio-choice" value="公寓"/>公寓</label>
-          <label><radio class="radio-choice" value="联排"/>联排</label>
-          <label><radio class="radio-choice" value="独栋"/>独栋</label>
-        </radio-group>
+        <text>基本信息</text>
       </view>
-
-      <view class="page-section">
-        <view class="page-section-title">卧室数量</view>
-        <radio-group namclass="radio-choice" e="卧室数量">
-          <label><radio class="radio-choice" value="卧室1个"/>1</label>
-          <label><radio class="radio-choice" value="卧室2个"/>2</label>
-          <label><radio class="radio-choice" value="卧室3个"/>3</label>
-        </radio-group> 
-      </view>
-
-      <view class="page-section page-section-gap">
-        <view class="page-section-title">卫生间数量</view>
-        <radio-group name="卫生间数量">
-          <label><radio class="radio-choice" value="卫生间1个"/>1</label>
-          <label><radio class="radio-choice" value="卫生间2个"/>2</label>
-          <label><radio class="radio-choice" value="卫生间3个"/>3</label>
-        </radio-group>
-      </view>
-
-      <view class="page-section">
-        <view class="page-section-title">独立卫生间</view>
-        <switch  name="是否独立卫生间"/>
-      </view>
-
-      <!-- //-- -->
-      <view class="page-section">
-      <view class="section__title">出租方式</view>
-        <picker bindchange="bindPickerChange" value="{{index}}" range="{{array}}">
-          <view class="picker" >
-            {{array[index]}}
-          </view>
-        </picker>
-      </view>
-      <!-- //-- -->
-
-
-      <view class="page-section">
-        <view class="section__title">补充要求</view>
-        <view class="weui-cells weui-cells_after-title">
-          <view class="weui-cell weui-cell_input">
-            <view class="weui-cell__bd" style="margin: 30rpx 0" >
-              <input class="weui-input" name="补充要求" placeholder="补充要求" />
-            </view>
-          </view>
-        </view>
-      </view>
-
-
-
-   
-      </view>
-
-      <view class="form-section-title">
-          <text >房源地址(必填)</text>
-      </view>
-
 
       <view class="form-section">
+
         <view class="page-section">
-        <!-- <view class="section__title">请输入地址</view> -->
-        <view class="weui-cells weui-cells_after-title">
-          <view class="weui-cell weui-cell_input">
-            <view class="weui-cell__bd" style="margin: 30rpx 0" >
-              <input class="weui-input" name="补充要求" placeholder="请输入地址" />
-            </view>
-          </view>
+          <view class="page-section-title" style="padding-top: 10px">房屋类型</view>
+          <radio-group name="房屋类型" class="radio-group">
+            <label>
+              <radio class="radio-choice" value="公寓" checked="true"/>公寓
+            </label>
+            <label>
+              <radio class="radio-choice" value="联排" />联排
+            </label>
+            <label>
+              <radio class="radio-choice" value="独栋" />独栋
+            </label>
+          </radio-group>
         </view>
-        </view>
-      </view>
 
-      <view class="form-section-title">
-          <text >设施服务(至少选一项)</text>
-      </view>
-
-      <view class="form-section">
         <view class="page-section">
-        <!-- <view class="section__title">请输入地址</view> -->
+          <view class="page-section-title">卧室数量</view>
+          <radio-group namclass="radio-choice" e="卧室数量" class="radio-group">
+            <label>
+              <radio class="radio-choice" value="卧室1个" checked="true"/>1
+            </label>
+            <label>
+              <radio class="radio-choice" value="卧室2个" />2
+            </label>
+            <label>
+              <radio class="radio-choice" value="卧室3个" />3
+            </label>
+          </radio-group>
+        </view>
+
         <view class="page-section page-section-gap">
-        <!-- <view class="section__title">设施服务</view> -->
-        <checkbox-group name="设施服务">
-          <label><checkbox value="家电" bindtap="handleTv"/>家电</label>
-          <label><checkbox value="床单被套"/>床单被套</label>
-        </checkbox-group>
-      </view>
+          <view class="page-section-title">卫生间数量</view>
+          <radio-group name="卫生间数量" class="radio-group">
+            <label>
+              <radio class="radio-choice" value="卫生间1个" checked="true"/>1
+            </label>
+            <label>
+              <radio class="radio-choice" value="卫生间2个" />2
+            </label>
+            <label>
+              <radio class="radio-choice" value="卫生间3个" />3
+            </label>
+          </radio-group>
         </view>
-      </view>
 
-      <view class="form-section-title">
-          <text >入住须知(非必选)</text>
-      </view>
-
-      <view class="form-section">
         <view class="page-section">
-        <!-- <view class="section__title">请输入地址</view> -->
-        <view class="page-section page-section-gap">
-        <!-- <view class="section__title">设施服务</view> -->
-        <checkbox-group name="设施服务">
-          <label><checkbox value="禁止宠物" bindtap="handleTv"/>禁止宠物</label>
-          <label><checkbox value="禁止吸烟"/>禁止吸烟</label>
-        </checkbox-group>
-      </view>
+          <view class="page-section-title">独立卫生间</view>
+          <switch name="是否独立卫生间" class="switch-space" />
         </view>
-      </view>
 
-      <view class="form-section-title">
-          <text >联系方式</text>
-      </view>
-
-      <view class="form-section">
+        <!-- //-- -->
         <view class="page-section">
-        <view class="section__title">电话</view>
-        <view class="weui-cells weui-cells_after-title">
-          <view class="weui-cell weui-cell_input">
-            <view class="weui-cell__bd" style="margin: 30rpx 0" >
-              <input class="weui-input" name="补充要求" placeholder="请输入电话" />
+          <view class="page-section-title">出租方式</view>
+          <picker bindchange="bindPickerChange" value="{{index}}" range="{{array}}">
+            <view class="picker">
+              {{array[index]}}
+            </view>
+          </picker>
+        </view>
+        <!-- //-- -->
+
+
+
+
+        <!-- </view> -->
+
+
+
+
+        <!-- <view class="form-section"> -->
+        <view class="page-section">
+          <!-- <view class="section__title">请输入地址</view> -->
+          <view class="page-section-title">
+            <text>房源地址</text>
+          </view>
+          <view class="weui-cells weui-cells_after-title">
+            <view class="weui-cell weui-cell_input">
+              <view class="weui-cell__bd" style="margin: 30rpx 0">
+                <input class="weui-input" name="补充要求" placeholder="请输入地址" />
+              </view>
             </view>
           </view>
         </view>
-        <view class="section__title">邮箱</view>
-        <view class="weui-cells weui-cells_after-title">
-          <view class="weui-cell weui-cell_input">
-            <view class="weui-cell__bd" style="margin: 30rpx 0" >
-              <input class="weui-input" name="补充要求" placeholder="请输入邮箱" />
+        <!-- </view> -->
+
+
+
+        <!-- <view class="form-section"> -->
+        <view class="page-section">
+          <view class="page-section-title">
+            <text>设施服务</text>
+          </view>
+          <!-- <view class="section__title">请输入地址</view> -->
+          <view class="page-section page-section-gap">
+            <!-- <view class="section__title">设施服务</view> -->
+            <checkbox-group name="设施服务" class="checkbox-group">
+              <label>
+                <checkbox value="家电" bindtap="handleTv" />家电
+              </label>
+              <label>
+                <checkbox value="床单被套" />床单被套
+              </label>
+            </checkbox-group>
+          </view>
+        </view>
+        <!-- </view> -->
+
+
+
+        <!-- <view class="form-section"> -->
+        <view class="page-section">
+          <!-- <view class="section__title">请输入地址</view> -->
+          <view class="page-section-title">
+            <text>入住须知</text>
+          </view>
+          <view class="page-section page-section-gap">
+            <!-- <view class="section__title">设施服务</view> -->
+            <checkbox-group name="设施服务" class="checkbox-group">
+              <label>
+                <checkbox value="禁止宠物" bindtap="handleTv" />禁止宠物
+              </label>
+              <label>
+                <checkbox value="禁止吸烟" />禁止吸烟
+              </label>
+            </checkbox-group>
+          </view>
+        </view>
+
+        <view class="page-section">
+          <view class="page-section-title">补充要求</view>
+          <view class="weui-cells weui-cells_after-title">
+            <view class="weui-cell weui-cell_input">
+              <view class="weui-cell__bd">
+                <input class="weui-input" name="补充要求" placeholder="补充要求" />
+              </view>
             </view>
           </view>
         </view>
-        </view>
+
       </view>
 
       <view class="form-section-title">
-          <text >详细信息</text>
+        <text>联系方式</text>
       </view>
 
       <view class="form-section">
         <view class="page-section">
-        <view class="textarea-container"> 
-          <textarea class="textarea-input1" maxlength="140" placeholder="请输入标题"></textarea>
-        </view>
-        
-        <view class="textarea-container"> 
-          <textarea class="textarea-input1" maxlength="140" placeholder="暂时不显示此项"></textarea>
-        </view>
+          <view class="section__title" style="font-weight: bold; padding-top: 10px;">电话</view>
+          <view class="weui-cells weui-cells_after-title">
+            <view class="weui-cell weui-cell_input">
+              <view class="weui-cell__bd" style="margin: 30rpx 0">
+                <input class="weui-input" name="补充要求" placeholder="请输入电话" />
+              </view>
+            </view>
+          </view>
+          <view class="section__title" style="font-weight: bold;">邮箱</view>
+          <view class="weui-cells weui-cells_after-title">
+            <view class="weui-cell weui-cell_input">
+              <view class="weui-cell__bd" style="margin: 30rpx 0">
+                <input class="weui-input" name="补充要求" placeholder="请输入邮箱" />
+              </view>
+            </view>
+          </view>
 
-        <view class="textarea-container"> 
-          <textarea class="textarea-input2" maxlength="140" placeholder="请输入房源详情"></textarea>
-        </view>
+          <view class="section__title" style="font-weight: bold;">微信</view>
+          <view class="weui-cells weui-cells_after-title">
+            <view class="weui-cell weui-cell_input">
+              <view class="weui-cell__bd" style="margin: 30rpx 0">
+                <input class="weui-input" name="补充要求" placeholder="请输入微信ID" />
+              </view>
+            </view>
+          </view>
 
         </view>
       </view>
 
-     
+      <view class="form-section-title">
+        <text>备注</text>
+      </view>
+
+      <view class="form-section">
+        <view class="page-section">
+         
+          <view class="textarea-container">
+            <textarea class="textarea-input2" maxlength="140" placeholder="请输入房源详情"></textarea>
+          </view>
+
+        </view>
+      </view>
+
+
 
 
       <view class="btn-area">
-        <button style="margin: 30rpx 0" type="primary" formType="submit">提交选择</button>
-        <button style="margin: 30rpx 0" formType="reset">重置</button>
+        <button type="primary" formType="submit" class="button-approve-font">提交</button>
+        <button formType="reset" class="button-cancel-font">重置</button>
       </view>
-      
+
     </form>
   </view>
 
 </view>
- 
-

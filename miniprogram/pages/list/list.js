@@ -76,6 +76,16 @@ Page({
   radioChange(e) {
     console.log('radio发生change事件，携带value值为：', e.detail.value)
 
+    if (e.detail.value == "GBS") {
+      this.setData({
+        listArr : []
+      })
+    } else {
+      this.setData({
+        listArr : datas.list_data
+      })
+    }
+
     const items = this.data.items
     for (let i = 0, len = items.length; i < len; ++i) {
       items[i].checked = items[i].value === e.detail.value
@@ -84,6 +94,11 @@ Page({
     this.setData({
       items
     })
+
+
+
+
+
   },
 
   toDetails(){

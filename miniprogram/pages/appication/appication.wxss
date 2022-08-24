@@ -1,1 +1,81 @@
-/* pages/appication/appication.wxss */
+/* pages/detail/detail.wxss */
+.container {
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+}
+.form-section-title {
+  font-size: 16px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  /* margin-bottom:100px; */
+}
+
+.form-section {
+  border: 1px solid white;
+  box-shadow: 0px 5px 20px 6px rgb(0 0 0 / 25%);
+  border-radius: 10px;
+  width: 90vw;
+}
+
+.page-section {
+  padding-left: 10px;
+  font-size: 12px;
+}
+
+.page-section-title {
+  padding-bottom: 10px;
+}
+
+/* switch {
+ width: 10px;
+  height: 20px;
+} */
+
+.radio-choice {
+  padding: 0px 2px 0px 10px;
+}
+
+.container {
+  padding: 5rpx;
+ width: 100vw;
+}
+
+.line {
+  width: 90%;
+  height: 1rpx;
+  background: #eee;
+  position: absolute;
+  top: 25rpx;
+  left: 5%;
+  z-index: -1;
+}
+
+button {
+  width: 280rpx;
+  height: 80rpx;
+}
+
+.content {
+  margin-top: 20rpx;
+  font-size: 32rpx;
+  text-indent: 32rpx;
+}
+
+.textarea-input1 {
+  border:1px solid black;
+  padding: 10rpx 10rpx;
+  width: 600rpx;
+  height: 50rpx;
+}
+
+.textarea-input2 {
+  border:1px solid black;
+  padding: 10rpx 10rpx;
+  width: 600rpx;
+  height: 150rpx;
+}
+
+.textarea-container {
+  padding: 10rpx 0rpx;
+}

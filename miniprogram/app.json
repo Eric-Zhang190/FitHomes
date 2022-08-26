@@ -1,11 +1,10 @@
 {
   "pages": [
-   
+    "pages/TestPic/testPic",
+    "pages/list/list",
     "pages/appication/appication",
     "pages/details/details",
     "pages/homepage/homepage",
-    "pages/list/list",
-    
     "pages/template/template"
   ],
   "window": {

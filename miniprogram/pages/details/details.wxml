@@ -14,6 +14,6 @@
     </ul>
   </view>
 
-  <button type="primary">申请房源</button>
+  <button type="primary" catchtap="toDetails">申请房源</button>
   
 </view>

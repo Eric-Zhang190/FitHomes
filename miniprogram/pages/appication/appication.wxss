@@ -121,3 +121,11 @@ button {
   font-weight: normal;
   background-color: #D3D3D3;
 }
+
+.showtv_show{
+  display: block;
+}
+
+.showtv_hide {
+  display: none;
+}

@@ -67,5 +67,11 @@ Page({
    */
   onShareAppMessage: function () {
 
+  },
+
+  toDetails(){
+    wx.navigateTo({
+      url: '/pages/appication/appication'
+    })
   }
 })

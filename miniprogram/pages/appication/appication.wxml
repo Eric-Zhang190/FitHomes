@@ -132,7 +132,7 @@
           </view>
         </view>
         <!-- </view> -->
-
+        <view class="{{showTV?'showtv_show':'showtv_hide'}}" >家电选项在此</view>
 
 
         <!-- <view class="form-section"> -->

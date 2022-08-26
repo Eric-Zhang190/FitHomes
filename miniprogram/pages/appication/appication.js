@@ -1,5 +1,7 @@
 // pages/details/detail.js
 let data = require('../../data/list-data');
+let showTV = true;
+
 Page({
 
 
@@ -10,6 +12,7 @@ Page({
     detailObj: {},
     index: null,
     pickerHidden: true,
+    showTV: false,
     chosen: '',
     array: ['整租', '单间'],
       objectArray: [
@@ -93,11 +96,6 @@ Page({
     }
   },
 
-  // data: {
-  //   pickerHidden: true,
-  //   chosen: ''
-  // },
-
   pickerConfirm(e) {
     this.setData({
       pickerHidden: true
@@ -150,6 +148,16 @@ Page({
     console.log('picker发送选择改变，携带值为', e.detail.value)
     this.setData({
       index: e.detail.value
+    })
+  },
+
+  handleTv: function() {
+    // var that = this;
+    // that.setData({
+    //   showTV: (!that.data.showTV)
+    // })
+    this.setData({
+      showTV: (!this.data.showTV)
     })
   }
   

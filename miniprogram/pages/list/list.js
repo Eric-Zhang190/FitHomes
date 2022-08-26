@@ -94,16 +94,11 @@ Page({
     this.setData({
       items
     })
-
-
-
-
-
   },
 
   toDetails(){
     wx.navigateTo({
-      url: 'pages/d',
+      url: '/pages/details/details'
     })
   }
 

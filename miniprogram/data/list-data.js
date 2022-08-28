@@ -7,7 +7,7 @@ let list_data = [
     detail_img3: '/images/IMG_5757.jpg',
     detail_img4: '/images/IMG_5763.jpg',
     detail_content: '此处有房源介绍-房源1；此处有房源介绍-房源1；此处有房源介绍-房源1；此处有房源介绍-房源1；此处有房源介绍-房源1',
-
+    area: 'UMD',
     postId: 0
   },
   
@@ -18,7 +18,7 @@ let list_data = [
     detail_img3: '/images/IMG_9469.jpg',
     detail_img4: '/images/IMG_9479.jpg',
     detail_content: '此处有房源介绍-房源2；此处有房源介绍-房源2；此处有房源介绍-房源2；此处有房源介绍-房源2；此处有房源介绍-房源2；此处有房源介绍-房源2；此处有房源介绍-房源2；',
-
+    area: 'GBS',
     postId: 1
   
   },

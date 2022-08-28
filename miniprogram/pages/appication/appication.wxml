@@ -30,7 +30,7 @@
           <view class="page-section-title" style="padding-top: 10px">房屋类型</view>
           <radio-group name="房屋类型" class="radio-group">
             <label>
-              <radio class="radio-choice" value="公寓" checked="true"/>公寓
+              <radio class="radio-choice" value="公寓" checked="true" />公寓
             </label>
             <label>
               <radio class="radio-choice" value="联排" />联排
@@ -45,7 +45,7 @@
           <view class="page-section-title">卧室数量</view>
           <radio-group namclass="radio-choice" e="卧室数量" class="radio-group">
             <label>
-              <radio class="radio-choice" value="卧室1个" checked="true"/>1
+              <radio class="radio-choice" value="卧室1个" checked="true" />1
             </label>
             <label>
               <radio class="radio-choice" value="卧室2个" />2
@@ -60,7 +60,7 @@
           <view class="page-section-title">卫生间数量</view>
           <radio-group name="卫生间数量" class="radio-group">
             <label>
-              <radio class="radio-choice" value="卫生间1个" checked="true"/>1
+              <radio class="radio-choice" value="卫生间1个" checked="true" />1
             </label>
             <label>
               <radio class="radio-choice" value="卫生间2个" />2
@@ -96,18 +96,19 @@
 
 
         <!-- <view class="form-section"> -->
-        <view class="page-section">
+        <view class="page-section" style="margin-bottom: 5px">
           <!-- <view class="section__title">请输入地址</view> -->
           <view class="page-section-title">
             <text>房源地址</text>
           </view>
-          <view class="weui-cells weui-cells_after-title">
+          <!-- <view class="weui-cells weui-cells_after-title">
             <view class="weui-cell weui-cell_input">
               <view class="weui-cell__bd" style="margin: 30rpx 0">
                 <input class="weui-input" name="补充要求" placeholder="请输入地址" />
               </view>
             </view>
-          </view>
+          </view> -->
+          <text>6034 Westchester Park Dr. </text>
         </view>
         <!-- </view> -->
 
@@ -132,9 +133,51 @@
           </view>
         </view>
         <!-- </view> -->
-        <view class="{{showTV?'showtv_show':'showtv_hide'}}" >家电选项在此</view>
+        <view class="{{showTV?'showtv_show':'showtv_hide'}}">
+          <view class="page-section-title" style="padding-top: 10px">吸尘器</view>
+          <radio-group name="吸尘器" class="radio-group">
+            <label>
+              <radio class="radio-choice" value="吸尘器1" checked="true" />吸尘器1
+            </label>
+            <image class="radio-image" mode="aspectFit" src="../../images/Vaccum1.png"></image>
+            <label>
+              <radio class="radio-choice" value="吸尘器2" />吸尘器2
+            </label>
+            <image class="radio-image" mode="aspectFit" src="../../images/Vaccum2.png"></image>
+            <label>
+              <radio class="radio-choice" value="吸尘器3" />吸尘器3
+            </label>
+            <image class="radio-image" mode="aspectFit" src="../../images/Vaccum3.png"></image>
+          </radio-group>
+
+          <view class="page-section-title" style="padding-top: 10px">电视</view>
+          <radio-group name="电视" class="radio-group">
+            <label>
+              <radio class="radio-choice" value="电视1" checked="true" />电视1
+            </label>
+            <label>
+              <radio class="radio-choice" value="电视2" />电视2
+            </label>
+            <label>
+              <radio class="radio-choice" value="电视3" />电视3
+            </label>
+          </radio-group>
+
+          <view class="page-section-title" style="padding-top: 10px">热水壶</view>
+          <radio-group name="热水壶" class="radio-group">
+            <label>
+              <radio class="radio-choice" value="热水壶1" checked="true" />热水壶1
+            </label>
+            <label>
+              <radio class="radio-choice" value="热水壶2" />热水壶2
+            </label>
+            <label>
+              <radio class="radio-choice" value="热水壶3" />热水壶3
+            </label>
+          </radio-group>
 
 
+        </view>
         <!-- <view class="form-section"> -->
         <view class="page-section">
           <!-- <view class="section__title">请输入地址</view> -->
@@ -208,7 +251,7 @@
 
       <view class="form-section">
         <view class="page-section">
-         
+
           <view class="textarea-container">
             <textarea class="textarea-input2" maxlength="140" placeholder="请输入房源详情"></textarea>
           </view>
@@ -220,7 +263,7 @@
 
 
       <view class="btn-area">
-        <button type="primary" formType="submit" class="button-approve-font">提交</button>
+        <button type="primary" formType="submit" class="button-approve-font" bindtap="backToDetails">提交</button>
         <button formType="reset" class="button-cancel-font">重置</button>
       </view>
 

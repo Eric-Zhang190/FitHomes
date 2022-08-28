@@ -159,7 +159,21 @@ Page({
     this.setData({
       showTV: (!this.data.showTV)
     })
-  }
+  },
+
+  backToDetails: function() {
+    wx.navigateTo({
+      url: '/pages/details/details'
+    });
+
+    wx.showToast({
+      title:'成功',
+      icon:'success',
+      duration:2000
+      })
+  },
+
+
   
 
   // ------------------------------------------//

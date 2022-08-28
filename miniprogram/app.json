@@ -1,11 +1,11 @@
 {
   "pages": [
-    "pages/TestPic/testPic",
-    "pages/list/list",
-    "pages/appication/appication",
-    "pages/details/details",
     "pages/homepage/homepage",
-    "pages/template/template"
+    "pages/appication/appication",
+    "pages/list/list",
+    "pages/details/details",
+    "pages/template/template",
+    "pages/TestPic/testPic"
   ],
   "window": {
     "backgroundColor": "#F6F6F6",

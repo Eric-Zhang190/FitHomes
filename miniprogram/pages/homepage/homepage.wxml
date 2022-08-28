@@ -1,6 +1,7 @@
 <!-- 搜索框 -->
 <view>
-  <image class="fit-img" src="../../images/FitIcon.jpg"></image>
+  <image class="fit-img" src="../../images/fit logo black w bg.png"></image>
+  
 </view>
 
 <view>

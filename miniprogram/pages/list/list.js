@@ -8,6 +8,7 @@ Page({
    */
   data: {
       listArr: [],
+      temArr: [],
       items: [
         {value: 'All', name: 'All', checked: 'true'},
         {value: 'UMD', name: 'UMD'},
@@ -75,8 +76,13 @@ Page({
 
   radioChange(e) {
     console.log('radio发生change事件，携带value值为：', e.detail.value)
+    console.log(e);
+
+    
 
     if (e.detail.value == "GBS") {
+
+
       this.setData({
         listArr : []
       })

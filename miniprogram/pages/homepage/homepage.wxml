@@ -1,20 +1,40 @@
 <!-- 搜索框 -->
 <view>
-  <image class="fit-img" src="../../images/fit logo black w bg.png"></image>
+  <image class="fit-img" mode="widthFix" src="../../icon/fit-logo-black-w-bg-transformed.png"></image>
   
 </view>
 
 <view>
-  <ul>
-    <view>
-      <li>text2</li>
-    </view>
-    <view>
-      <li>text2</li>
-    </view>   <view>
-      <li>text2</li>
-    </view>
+  <view class="fithome-adv">
+    <text>Fit公寓-留学生的家</text>
+  </view>
+  <view class="fithome-description">
+    <ul>
+      <li class="fithome-description_box"><text class="fithome-description_title">优质房源</text>
+      <ul>
+        <li>精挑优质房源，安全舒适是我们的基本准则</li>
+        <li>多价位的房源选择， 只为提供适合你的高性价比房源</li>
+        <li>多价位的房源选择， 只为提供适合你的高性价比房源</li>
+      </ul>
+      </li>
+      <li  class="fithome-description_box"><text class="fithome-description_title">管家式服务</text>
+        <ul>
+        <li>从在国内选房到租房结束的一站到底式服务</li>
+        <li>帮你提前采购所需家电，帮你预定接机、家政等服务</li>
+      </ul>
+      </li>
   </ul>
+  </view>
+
+  <view>
+    <swiper indicator-dots indicator-color="white" indicator-active-color="#ecf244" autoplay interval="3000" circular>
+    <swiper-item><image mode="aspectFit" data-index="0" src="{{img2}}"></image></swiper-item>
+    <swiper-item><image mode="aspectFit" data-index="1" src="{{img3}}"></image></swiper-item>
+    <swiper-item><image mode="aspectFit" data-index="2" src="{{img4}}"></image></swiper-item>
+    <swiper-item><image mode="aspectFit" data-index="3" src="{{img5}}"></image></swiper-item>
+  </swiper>
+  </view>
+ 
 </view>
 
 

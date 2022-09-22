@@ -1,12 +1,12 @@
 <view class="detail-container">
   <swiper indicator-dots indicator-color="white" indicator-active-color="#ecf244">
-    <swiper-item><image data-index="0" src="/images/IMG_5750.jpg"></image></swiper-item>
-    <swiper-item><image data-index="1" src="/images/IMG_5751.jpg"></image></swiper-item>
-    <swiper-item><image data-index="2" src="/images/IMG_5757.jpg"></image></swiper-item>
-    <swiper-item><image data-index="3" src="/images/IMG_5763.jpg"></image></swiper-item>
+    <swiper-item><image mode="aspectFit" data-index="0" src="{{img1}}"></image></swiper-item>
+    <swiper-item><image mode="aspectFit" data-index="1" src="{{img2}}"></image></swiper-item>
+    <swiper-item><image mode="aspectFit" data-index="2" src="{{img3}}"></image></swiper-item>
+    <swiper-item><image mode="aspectFit" data-index="3" src="{{img4}}"></image></swiper-item>
   </swiper>
 
-  <view>  
+  <view class="detail-house-box">  
     <ul wx:for="{{house1}}" wx:key="{{index}}">
       <view>
         <li>{{item.value}}</li>

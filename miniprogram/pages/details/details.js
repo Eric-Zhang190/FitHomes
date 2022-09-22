@@ -6,11 +6,15 @@ Page({
    */
   data: {
     house1: [
-      {value: '房子好1'},
-      {value: '房子好2'},
-      {value: '房子好3'},
-      {value: '房子好4'},
-    ]
+      {value: 'Airbnb型公寓，设有大部分家具（床/床垫，沙发，餐桌椅，书桌椅等）欢迎拎包入住'},
+      {value: '屋内设有独立洗衣机和烘干机，无需跟别的公寓租户共用公用洗衣房'},
+      {value: '公寓管理费用已经包括了水电冷暖气，只需房租一项无需担心额外账单，价格绝对合理公道'},
+      {value: '我们有专业管理团队负责，可以随时告诉我们您的需求'},
+    ],
+    img1: "cloud://cloud1-6g2eaes788ded79b.636c-cloud1-6g2eaes788ded79b-1308659050/IMG_5750-transformed.jpg",
+    img2: "cloud://cloud1-6g2eaes788ded79b.636c-cloud1-6g2eaes788ded79b-1308659050/IMG_5751-transformed.jpg",
+    img3: "cloud://cloud1-6g2eaes788ded79b.636c-cloud1-6g2eaes788ded79b-1308659050/IMG_5763-transformed.jpg",
+    img4: "cloud://cloud1-6g2eaes788ded79b.636c-cloud1-6g2eaes788ded79b-1308659050/IMG_5757-transformed.jpg"
   },
 
   /**

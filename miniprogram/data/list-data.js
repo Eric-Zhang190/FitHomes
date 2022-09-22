@@ -2,22 +2,14 @@ let list_data = [
 
   {
     title: 'Westchester Park 6034',
-    detail_img1: '/images/IMG_5750.jpg',
-    detail_img2: '/images/IMG_5751.jpg',
-    detail_img3: '/images/IMG_5757.jpg',
-    detail_img4: '/images/IMG_5763.jpg',
-    detail_content: '此处有房源介绍-房源1；此处有房源介绍-房源1；此处有房源介绍-房源1；此处有房源介绍-房源1；此处有房源介绍-房源1',
+    detail_content: 'Westchester Park小区现有2B1B户型公寓出租（可整租可单租）。小区就建于Westchester Park区域，被步行trail环绕，随时可以享受自然。小区也是在马大附近安全系数最好的区域内，距离马大开车6-10分钟，也有校车直达学校。',
     area: 'UMD',
     postId: 0
   },
   
   {
     title: 'Westchester Park 6002',
-    detail_img1: '/images/IMG_9453.jpg',
-    detail_img2: '/images/IMG_9460.jpg',
-    detail_img3: '/images/IMG_9469.jpg',
-    detail_img4: '/images/IMG_9479.jpg',
-    detail_content: '此处有房源介绍-房源2；此处有房源介绍-房源2；此处有房源介绍-房源2；此处有房源介绍-房源2；此处有房源介绍-房源2；此处有房源介绍-房源2；此处有房源介绍-房源2；',
+    detail_content: 'Westchester Park小区现有2B1B户型公寓出租（可整租可单租）。小区就建于Westchester Park区域，被步行trail环绕，随时可以享受自然。小区也是在马大附近安全系数最好的区域内，距离马大开车6-10分钟，也有校车直达学校。',
     area: 'GBS',
     postId: 1
   

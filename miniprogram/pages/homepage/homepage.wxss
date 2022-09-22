@@ -1,6 +1,47 @@
 /* pages/homepage/homepage.wxss */
+.fithome-adv {
+  text-align: center;
+  font-size: 32rpx;
+  font-weight: bold;
+}
+
+.fithome-description {
+  padding: 10rpx 20rpx;
+}
+.fithome-description_box {
+  padding-bottom: 20rpx;
+}
+
+.fithome-description_title {
+  text-decoration-line: underline;
+}
+
+swiper {
+  width: 100%;
+  height: 400rpx;
+
+}
+
+swiper image {
+  width: 100%;
+  height: 100%;
+}
+
 ul {
   display: list-item;
-  list-style-type: square;
-  text-align: center;
+  list-style-type: none;
+  text-align: left;
+
+}
+
+ul li {
+  display: block;
+}
+
+ul li span {
+  text-decoration-line: underline;
+}
+
+.fit-img {
+  width: 100%;
 }

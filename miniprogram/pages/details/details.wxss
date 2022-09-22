@@ -12,3 +12,8 @@ swiper image {
   height: 100%;
 }
 
+.detail-house-box {
+  padding: 10rpx 20rpx;
+
+}
+

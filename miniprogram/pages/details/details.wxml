@@ -1,19 +1,56 @@
 <view class="detail-container">
   <swiper indicator-dots indicator-color="white" indicator-active-color="#ecf244">
-    <swiper-item><image mode="aspectFit" data-index="0" src="{{img1}}"></image></swiper-item>
-    <swiper-item><image mode="aspectFit" data-index="1" src="{{img2}}"></image></swiper-item>
-    <swiper-item><image mode="aspectFit" data-index="2" src="{{img3}}"></image></swiper-item>
-    <swiper-item><image mode="aspectFit" data-index="3" src="{{img4}}"></image></swiper-item>
+    <swiper-item>
+      <image mode="aspectFit" data-index="0" src="{{img1}}"></image>
+    </swiper-item>
+    <swiper-item>
+      <image mode="aspectFit" data-index="1" src="{{img2}}"></image>
+    </swiper-item>
+    <swiper-item>
+      <image mode="aspectFit" data-index="2" src="{{img3}}"></image>
+    </swiper-item>
+    <swiper-item>
+      <image mode="aspectFit" data-index="3" src="{{img4}}"></image>
+    </swiper-item>
   </swiper>
 
-  <view class="detail-house-box">  
-    <ul wx:for="{{house1}}" wx:key="{{index}}">
-      <view>
-        <li>{{item.value}}</li>
-      </view>
-    </ul>
+  <view class="house-title">
+    <text>基本信息</text>
+  </view>
+  <view class="house-display">
+    <view class="detail-house-box__info">
+      <ul wx:for="{{house1}}" wx:key="{{index}}">
+        <view>
+          <li>{{item.value}}</li>
+        </view>
+      </ul>
+    </view>
   </view>
 
+  <view class="house-title">
+    <text>房屋概况</text>
+  </view>
+  <view class="house-display">
+    <view class="detail-house-box__details">
+      <div wx:for="{{house2}}" wx:key="{{index}}">
+        <view class="detail-icon">
+          <div>{{item.value}}</div>
+        </view>
+      </div>
+    </view>
+  </view>
+
+  <view class="house-title">
+    <text>可租日期</text>
+  </view>
+  <view class="house-display">
+    <view class="detail-house-box__info">
+      <text>2022-08-01 —— 2023-07-31</text>
+    </view>
+  </view>
+
+
+
   <button type="primary" catchtap="toDetails">申请房源</button>
-  
+
 </view>

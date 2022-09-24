@@ -14,7 +14,7 @@
     </view>
   </view>
 
-  <view wx:key="id" wx:for="{{listArr}}" class="list-page">
+  <view wx:key="id" wx:for="{{listArr}}" class="list-page" catchtap="toDetails">
     <view class="list-item log-post">
       <view class="cat-title" data-item="{{item.title}}" data-id="{{item.id}}" bindtap="redictIndex">
         <view class="topic-name">
@@ -25,7 +25,7 @@
         <view class="log-list">
           <block wx:key="id" wx:for="{{postsList}}" wx:for-item='item_p' wx:if="{{item.id == item_p.categories}}">
             <view class="log-items">
-              <image src="{{item_p.post_thumbnail_image}}" mode="aspectFit" class="cover" catchtap="toDetails"></image>
+              <image src="{{item_p.post_thumbnail_image}}" mode="aspectFit" class="cover" ></image>
               <view class="content-title">
                 <text class="tit">{{item_p.title.rendered}}</text>
               </view>

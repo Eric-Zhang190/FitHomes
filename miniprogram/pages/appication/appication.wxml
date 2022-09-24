@@ -26,7 +26,18 @@
 
       <view class="form-section">
 
-        <view class="page-section">
+        <!-- //-- -->
+        <!-- <view class="page-section">
+          <view class="page-section-title">出租方式</view>
+          <picker bindchange="bindPickerChange" value="{{index}}" range="{{array}}">
+            <view class="picker">
+              {{array[index]}}
+            </view>
+          </picker>
+        </view> -->
+        <!-- //-- -->
+
+        <!-- <view class="page-section">
           <view class="page-section-title" style="padding-top: 10px">房屋类型</view>
           <radio-group name="房屋类型" class="radio-group">
             <label>
@@ -69,30 +80,16 @@
               <radio class="radio-choice" value="卫生间3个" />3
             </label>
           </radio-group>
-        </view>
+        </view> -->
 
-        <view class="page-section">
-          <view class="page-section-title">独立卫生间</view>
-          <switch name="是否独立卫生间" class="switch-space" />
-        </view>
 
-        <!-- //-- -->
-        <view class="page-section">
-          <view class="page-section-title">出租方式</view>
-          <picker bindchange="bindPickerChange" value="{{index}}" range="{{array}}">
-            <view class="picker">
-              {{array[index]}}
-            </view>
-          </picker>
-        </view>
-        <!-- //-- -->
         <!-- </view> -->
 
         <!-- <view class="form-section"> -->
         <view class="page-section" style="margin-bottom: 5px">
           <!-- <view class="section__title">请输入地址</view> -->
           <view class="page-section-title">
-            <text>房源地址</text>
+            <text>房源地址：<text class="title-address">6034 Westchester Park Dr.</text></text>
           </view>
           <!-- <view class="weui-cells weui-cells_after-title">
             <view class="weui-cell weui-cell_input">
@@ -101,11 +98,48 @@
               </view>
             </view>
           </view> -->
-          <text>6034 Westchester Park Dr. </text>
+          <!-- <text class="house-address">6034 Westchester Park Dr. </text> -->
         </view>
         <!-- </view> -->
 
+        <!-- 租期 -->
+        <view class="page-section">
+          <view class="page-section-title">
+            <text>租房形式</text>
+          </view>
+          <!-- <view class="section__title">请输入地址</view> -->
+          <view class="page-section page-section-gap">
+            <!-- <view class="section__title">设施服务</view> -->
+            <radio-group name="可选租期" class="radio-group">
+              <label>
+                <radio value="整租"  />整租
+              </label>
+              <label>
+                <radio value="单间" bindtap="handleTv"/>单间
+              </label>
+            </radio-group>
+          </view>
+        </view>
+        <!-- </view> -->
+        <view class="{{showTV?'showtv_show':'showtv_hide'}} page-section">
+          <view class="page-section-title">卧室选择</view>
+          <radio-group name="吸尘器" class="radio-group">
+            <label>
+              <radio class="radio-choice" value="主卧" />主卧
+            </label>
+            <label>
+              <radio class="radio-choice" value="侧卧" />侧卧
+            </label>
+            </radio-group>
+        </view>
 
+
+        <!-- 租期end-->
+
+        <view class="page-section">
+          <view class="page-section-title">独立卫生间</view>
+          <switch name="是否独立卫生间" class="switch-space" />
+        </view>
 
         <!-- <view class="form-section"> -->
         <view class="page-section">
@@ -133,44 +167,13 @@
             <label>
               <radio class="radio-choice" value="吸尘器1" checked="true" />吸尘器1
             </label>
-            <image class="radio-image" mode="aspectFit" src="../../images/Vaccum1.png"></image>
             <label>
               <radio class="radio-choice" value="吸尘器2" />吸尘器2
             </label>
-            <image class="radio-image" mode="aspectFit" src="../../images/Vaccum2.png"></image>
             <label>
               <radio class="radio-choice" value="吸尘器3" />吸尘器3
             </label>
-            <image class="radio-image" mode="aspectFit" src="../../images/Vaccum3.png"></image>
-          </radio-group>
-
-          <view class="page-section-title" style="padding-top: 10px">电视</view>
-          <radio-group name="电视" class="radio-group">
-            <label>
-              <radio class="radio-choice" value="电视1" checked="true" />电视1
-            </label>
-            <label>
-              <radio class="radio-choice" value="电视2" />电视2
-            </label>
-            <label>
-              <radio class="radio-choice" value="电视3" />电视3
-            </label>
-          </radio-group>
-
-          <view class="page-section-title" style="padding-top: 10px">热水壶</view>
-          <radio-group name="热水壶" class="radio-group">
-            <label>
-              <radio class="radio-choice" value="热水壶1" checked="true" />热水壶1
-            </label>
-            <label>
-              <radio class="radio-choice" value="热水壶2" />热水壶2
-            </label>
-            <label>
-              <radio class="radio-choice" value="热水壶3" />热水壶3
-            </label>
-          </radio-group>
-
-
+           </radio-group>
         </view> -->
         <!-- <view class="form-section"> -->
         <!-- <view class="page-section">

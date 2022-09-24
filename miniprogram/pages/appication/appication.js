@@ -14,7 +14,7 @@ Page({
     pickerHidden: true,
     showTV: false,
     chosen: '',
-    array: ['整租', '单间'],
+    array: ['整租', '分租'],
       objectArray: [
         {
           id: 0,

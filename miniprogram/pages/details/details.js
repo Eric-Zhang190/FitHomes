@@ -11,6 +11,13 @@ Page({
       {value: '公寓管理费用已经包括了水电冷暖气，只需房租一项无需担心额外账单，价格绝对合理公道'},
       {value: '我们有专业管理团队负责，可以随时告诉我们您的需求'},
     ],
+    house2: [
+      {value: '2B1B'},
+      {value: '禁止宠物'},
+      {value: '禁止吸烟'},
+      {value: '不限男女'},
+      {value: '有停车位'},
+    ],
     img1: "cloud://cloud1-6g2eaes788ded79b.636c-cloud1-6g2eaes788ded79b-1308659050/IMG_5750-transformed.jpg",
     img2: "cloud://cloud1-6g2eaes788ded79b.636c-cloud1-6g2eaes788ded79b-1308659050/IMG_5751-transformed.jpg",
     img3: "cloud://cloud1-6g2eaes788ded79b.636c-cloud1-6g2eaes788ded79b-1308659050/IMG_5763-transformed.jpg",

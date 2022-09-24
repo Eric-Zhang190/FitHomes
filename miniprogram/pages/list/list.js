@@ -1,6 +1,5 @@
 // pages/list/list.js
 let datas = require('../../data/list-data.js');
-console.log(datas);
 Page({
 
   /**
@@ -8,16 +7,46 @@ Page({
    */
   data: {
       listArr: [],
-      temArr: [],
       items: [
         {value: 'All', name: 'All', checked: 'true'},
         {value: 'UMD', name: 'UMD'},
         {value: 'GBS', name: 'GBS'},
       ],
-      img1: "cloud://cloud1-6g2eaes788ded79b.636c-cloud1-6g2eaes788ded79b-1308659050/IMG_5750-transformed.jpg",
-      img2: "cloud://cloud1-6g2eaes788ded79b.636c-cloud1-6g2eaes788ded79b-1308659050/IMG_5751-transformed.jpg",
-      img3: "cloud://cloud1-6g2eaes788ded79b.636c-cloud1-6g2eaes788ded79b-1308659050/IMG_5763-transformed.jpg",
-      img4: "cloud://cloud1-6g2eaes788ded79b.636c-cloud1-6g2eaes788ded79b-1308659050/IMG_5757-transformed.jpg"
+      postsList: [
+        {
+          "id": 1,
+          "categories": [
+            0
+          ],
+          "post_thumbnail_image": "cloud://cloud1-6g2eaes788ded79b.636c-cloud1-6g2eaes788ded79b-1308659050/IMG_5750-transformed.jpg",
+  
+        },
+        {
+          "id": 2,
+          "categories": [
+            1
+          ],
+          "post_thumbnail_image": "cloud://cloud1-6g2eaes788ded79b.636c-cloud1-6g2eaes788ded79b-1308659050/IMG_5751-transformed.jpg",
+        },
+        {
+          "id": 3,
+          "categories": [
+            2
+          ],
+          "post_thumbnail_image": "cloud://cloud1-6g2eaes788ded79b.636c-cloud1-6g2eaes788ded79b-1308659050/IMG_5763-transformed.jpg",
+        },
+        {
+          "id": 4,
+          "categories": [
+            3
+          ],
+          "post_thumbnail_image": "cloud://cloud1-6g2eaes788ded79b.636c-cloud1-6g2eaes788ded79b-1308659050/IMG_5757-transformed.jpg",
+        }
+      ]
+      // img1: "cloud://cloud1-6g2eaes788ded79b.636c-cloud1-6g2eaes788ded79b-1308659050/IMG_5750-transformed.jpg",
+      // img2: "cloud://cloud1-6g2eaes788ded79b.636c-cloud1-6g2eaes788ded79b-1308659050/IMG_5751-transformed.jpg",
+      // img3: "cloud://cloud1-6g2eaes788ded79b.636c-cloud1-6g2eaes788ded79b-1308659050/IMG_5763-transformed.jpg",
+      // img4: "cloud://cloud1-6g2eaes788ded79b.636c-cloud1-6g2eaes788ded79b-1308659050/IMG_5757-transformed.jpg"
   },
 
   /**
@@ -85,8 +114,6 @@ Page({
     
 
     if (e.detail.value == "GBS") {
-
-
       this.setData({
         listArr : []
       })

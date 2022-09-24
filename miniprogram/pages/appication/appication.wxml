@@ -86,14 +86,7 @@
           </picker>
         </view>
         <!-- //-- -->
-
-
-
-
         <!-- </view> -->
-
-
-
 
         <!-- <view class="form-section"> -->
         <view class="page-section" style="margin-bottom: 5px">
@@ -124,7 +117,8 @@
             <!-- <view class="section__title">设施服务</view> -->
             <checkbox-group name="设施服务" class="checkbox-group">
               <label>
-                <checkbox value="家电" bindtap="handleTv" />家电
+                <!-- <checkbox value="家电" bindtap="handleTv" /> -->
+                <checkbox value="家电"/>家电
               </label>
               <label>
                 <checkbox value="床单被套" />床单被套
@@ -133,7 +127,7 @@
           </view>
         </view>
         <!-- </view> -->
-        <view class="{{showTV?'showtv_show':'showtv_hide'}}">
+        <!-- <view class="{{showTV?'showtv_show':'showtv_hide'}}">
           <view class="page-section-title" style="padding-top: 10px">吸尘器</view>
           <radio-group name="吸尘器" class="radio-group">
             <label>
@@ -177,15 +171,15 @@
           </radio-group>
 
 
-        </view>
+        </view> -->
         <!-- <view class="form-section"> -->
-        <view class="page-section">
-          <!-- <view class="section__title">请输入地址</view> -->
+        <!-- <view class="page-section">
+          <view class="section__title">请输入地址</view>
           <view class="page-section-title">
             <text>入住须知</text>
           </view>
           <view class="page-section page-section-gap">
-            <!-- <view class="section__title">设施服务</view> -->
+            <view class="section__title">设施服务</view>
             <checkbox-group name="设施服务" class="checkbox-group">
               <label>
                 <checkbox value="禁止宠物" bindtap="handleTv" />禁止宠物
@@ -195,7 +189,7 @@
               </label>
             </checkbox-group>
           </view>
-        </view>
+        </view> -->
 
         <view class="page-section">
           <view class="page-section-title">补充要求</view>
@@ -229,15 +223,6 @@
             <view class="weui-cell weui-cell_input">
               <view class="weui-cell__bd" style="margin: 30rpx 0">
                 <input class="weui-input" name="补充要求" placeholder="请输入邮箱" />
-              </view>
-            </view>
-          </view>
-
-          <view class="section__title" style="font-weight: bold;">微信</view>
-          <view class="weui-cells weui-cells_after-title">
-            <view class="weui-cell weui-cell_input">
-              <view class="weui-cell__bd" style="margin: 30rpx 0">
-                <input class="weui-input" name="补充要求" placeholder="请输入微信ID" />
               </view>
             </view>
           </view>

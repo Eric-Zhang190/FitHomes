@@ -1,23 +1,43 @@
 <!--pages/list/list.wxml-->
-<import src="/pages/template/template.wxml" />
+<!-- <import src="/pages/template/template.wxml" /> -->
 
-<view>
+<view class="listpage-container">
   <view class="page-section">
     <view class="page-section-title">房源</view>
-    <view class="weui-cells weui-cells_after-title">
-      <radio-group bindchange="radioChange">
+    <view>
+      <radio-group bindchange="radioChange" class="weui-cells_after-title">
         <label class="weui-cell weui-check__label" wx:for="{{items}}" wx:key="{{item.value}}">
-            <radio value="{{item.value}}" checked="{{item.checked}}"/>
-            {{item.name}}
+          <radio value="{{item.value}}" checked="{{item.checked}}" />
+          {{item.name}}
         </label>
       </radio-group>
     </view>
   </view>
 
-  <block wx:for="{{listArr}}" wx:key="{{index}}">
-    <view catchtap="toDetails">
-      <template is='listTmp'  data="{{...item}}"/>
+  <view wx:key="id" wx:for="{{listArr}}" class="list-page">
+    <view class="list-item log-post">
+      <view class="cat-title" data-item="{{item.title}}" data-id="{{item.id}}" bindtap="redictIndex">
+        <view class="topic-name">
+          <text>{{item.title}}</text>
+        </view>
+      </view>
+      <scroll-view scroll-x style="width:100%;white-space: nowrap">
+        <view class="log-list">
+          <block wx:key="id" wx:for="{{postsList}}" wx:for-item='item_p' wx:if="{{item.id == item_p.categories}}">
+            <view class="log-items">
+              <image src="{{item_p.post_thumbnail_image}}" mode="aspectFit" class="cover" catchtap="toDetails"></image>
+              <view class="content-title">
+                <text class="tit">{{item_p.title.rendered}}</text>
+              </view>
+            </view>
+          </block>
+        </view>
+      </scroll-view>
+      <view class="topic-content">
+        <text>{{item.detail_content}}</text>
+      </view>
+
     </view>
-  </block>
-  
+  </view>
+
 </view>

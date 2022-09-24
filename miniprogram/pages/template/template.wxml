@@ -5,34 +5,8 @@
       <text>{{title}}</text>
     </view>
     <view>
-      <swiper indicator-dots indicator-color="white" indicator-active-color="#ecf244">
-        <swiper-item>
-          <image mode="aspectFit" data-index="0" src="{{img1}} "></image>
-        </swiper-item>
-        <swiper-item>
-          <image mode="aspectFit" data-index="1" src="{{img2}}"></image>
-        </swiper-item>
-        <swiper-item>
-          <image mode="aspectFit" data-index="2" src="{{img3}}"></image>
-        </swiper-item>
-        <swiper-item>
-          <image mode="aspectFit" data-index="3" src="{{img4}}"></image>
-        </swiper-item>
-      </swiper>
-      <!-- <swiper indicator-dots indicator-color="white" indicator-active-color="#ecf244">
-        <swiper-item>
-          <image mode="aspectFit" data-index="0" src="{{detail_img1}}"></image>
-        </swiper-item>
-        <swiper-item>
-          <image mode="aspectFit" data-index="1" src="{{detail_img2}}"></image>
-        </swiper-item>
-        <swiper-item>
-          <image mode="aspectFit" data-index="2" src="{{detail_img3}}"></image>
-        </swiper-item>
-        <swiper-item>
-          <image mode="aspectFit" data-index="3" src="{{detail_img4}}"></image>
-        </swiper-item>
-      </swiper> -->
+      <image src="{{img1}}"></image>
+      
     </view>
     <view>
       <text>{{detail_content}}</text>

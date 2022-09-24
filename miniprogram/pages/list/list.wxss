@@ -1,14 +1,55 @@
 /* pages/list/list.wxss */
-@import '/pages/template/template.wxss';
+/* @import '/pages/template/template.wxss'; */
 
-swiper {
+/* swiper {
   width: 100%;
   height: 400rpx;
 
+} */
+
+.listpage-container {
+  background: linear-gradient(to bottom left, rgba(127, 255, 212, 0.7), 10%, rgba(255, 182, 193, 0.2), white);
 }
 
-swiper image {
+
+
+.list-page {
+  display: flex;
+  justify-content: center;
+}
+.log-post {
+  padding: 20rpx;
+  border: 1px solid white;
+  box-shadow: 0px 5px 20px 6px rgb(0 0 0 / 5%);
+  border-radius: 10px;
+  width: 90vw;
+  margin: 20rpx;
+}
+.log-items {
+  display: flex;
+  justify-content: center;
   width: 100%;
   height: 100%;
+}
+
+.weui-cells_after-title radio .wx-radio-input {
+  height: 24rpx;
+  width: 24rpx;
+  border-radius: 50%;
+  border: 2rpx solid #e6c171;
+  background: transparent;
+}
+
+.weui-cells_after-title radio .wx-radio-input.wx-radio-input-checked::before {
+  border-radius: 50%; /* 圆角 */
+  width: 18rpx; /* 选中后对勾大小，不要超过背景的尺寸 */
+  height: 18rpx; /* 选中后对勾大小，不要超过背景的尺寸 */
+  line-height: 18rpx;
+  text-align: center;
+  font-size: 0rpx; /* 对勾大小 30rpx */
+  color: transparent; /* 对勾颜色 白色 */
+  background: #e6c171;
+  transform: translate(-50%, -50%) scale(1);
+  -webkit-transform: translate(-50%, -50%) scale(1);
 }
 

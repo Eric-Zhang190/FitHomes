@@ -1,12 +1,20 @@
 /* pages/homepage/homepage.wxss */
+.homepage-container {
+
+  height: 100vh;
+  background:  #2A292F;
+}
+
 .fithome-adv {
   text-align: center;
   font-size: 32rpx;
   font-weight: bold;
+  color: white;
 }
 
 .fithome-description {
   padding: 10rpx 20rpx;
+  color: white;
 }
 .fithome-description_box {
   padding-bottom: 20rpx;
@@ -16,7 +24,7 @@
   text-decoration-line: underline;
 }
 
-swiper {
+/* swiper {
   width: 100%;
   height: 400rpx;
 
@@ -25,7 +33,7 @@ swiper {
 swiper image {
   width: 100%;
   height: 100%;
-}
+} */
 
 ul {
   display: list-item;
@@ -45,3 +53,38 @@ ul li span {
 .fit-img {
   width: 100%;
 }
+
+/*控制轮播图*/
+.swiper-block {
+  height: 300rpx;
+  width: 100%;
+  }
+
+  .swiper-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  overflow: unset;
+  /* background: linear-gradient(to bottom left, rgba(255, 255, 0, 0.7), 50%, rgba(0, 0, 0, 0.2)); */
+
+
+  }
+
+  .slide-image {
+  height: 270rpx;
+  width: 480rpx;
+  border-radius: 20rpx;
+  box-shadow: 0px 0px 30rpx rgba(255, 255, 255, 1);
+  margin: 0rpx 30rpx;
+  z-index: 1;
+  /* background-color: rgba(255, 153, 0, 1); */
+  /* background: linear-gradient(to bottom left, rgba(255, 153, 0, 1), 50%, rgba(255, 255, 255, 1)); */
+  background-color: white;
+  }
+
+  .active {
+  transform: scale(1.14);
+  transition: all 0.2s ease-in 0s;
+  z-index: 20;
+  }

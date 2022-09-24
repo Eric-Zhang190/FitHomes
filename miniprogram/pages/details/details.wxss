@@ -1,5 +1,9 @@
 /* pages/list/list.wxss */
 /* @import '/pages/template/list-template.wxss'; */
+.detail-container {
+  height: 100vh;
+  background: linear-gradient(to bottom left, rgba(127, 255, 212, 0.7), 10%, rgba(255, 182, 193, 0.2), white);
+}
 
 swiper {
   width: 100%;
@@ -16,4 +20,3 @@ swiper image {
   padding: 10rpx 20rpx;
 
 }
-

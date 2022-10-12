@@ -14,9 +14,9 @@
     </view>
   </view>
 
-  <view wx:key="id" wx:for="{{listArr}}" class="list-page" catchtap="toDetails">
-    <view class="list-item log-post">
-      <view class="cat-title" data-item="{{item.title}}" data-id="{{item.id}}" bindtap="redictIndex">
+  <view wx:key="{{index}}" wx:for="{{listArr}}" class="list-page" >
+    <view class="list-item log-post" catchtap="toDetails" data-index="{{index}}"> 
+      <view class="cat-title" data-item="{{item.title}}" data-id="{{item.id}}">
         <view class="topic-name">
           <text>{{item.title}}</text>
         </view>

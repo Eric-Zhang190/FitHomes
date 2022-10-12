@@ -175,25 +175,7 @@
             </label>
            </radio-group>
         </view> -->
-        <!-- <view class="form-section"> -->
-        <!-- <view class="page-section">
-          <view class="section__title">请输入地址</view>
-          <view class="page-section-title">
-            <text>入住须知</text>
-          </view>
-          <view class="page-section page-section-gap">
-            <view class="section__title">设施服务</view>
-            <checkbox-group name="设施服务" class="checkbox-group">
-              <label>
-                <checkbox value="禁止宠物" bindtap="handleTv" />禁止宠物
-              </label>
-              <label>
-                <checkbox value="禁止吸烟" />禁止吸烟
-              </label>
-            </checkbox-group>
-          </view>
-        </view> -->
-
+       
         <view class="page-section">
           <view class="page-section-title">补充要求</view>
           <view class="weui-cells weui-cells_after-title">

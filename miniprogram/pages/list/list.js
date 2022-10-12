@@ -18,7 +18,7 @@ Page({
           "categories": [
             0
           ],
-          "post_thumbnail_image": "cloud://cloud1-6g2eaes788ded79b.636c-cloud1-6g2eaes788ded79b-1308659050/IMG_5750-transformed.jpg",
+          "post_thumbnail_image": "cloud://cloud1-6g2eaes788ded79b.636c-cloud1-6g2eaes788ded79b-1308659050/6034_Overview.jpg",
   
         },
         {
@@ -26,21 +26,7 @@ Page({
           "categories": [
             1
           ],
-          "post_thumbnail_image": "cloud://cloud1-6g2eaes788ded79b.636c-cloud1-6g2eaes788ded79b-1308659050/IMG_5751-transformed.jpg",
-        },
-        {
-          "id": 3,
-          "categories": [
-            2
-          ],
-          "post_thumbnail_image": "cloud://cloud1-6g2eaes788ded79b.636c-cloud1-6g2eaes788ded79b-1308659050/IMG_5763-transformed.jpg",
-        },
-        {
-          "id": 4,
-          "categories": [
-            3
-          ],
-          "post_thumbnail_image": "cloud://cloud1-6g2eaes788ded79b.636c-cloud1-6g2eaes788ded79b-1308659050/IMG_5757-transformed.jpg",
+          "post_thumbnail_image": "cloud://cloud1-6g2eaes788ded79b.636c-cloud1-6g2eaes788ded79b-1308659050/6002_Overview.jpg",
         }
       ]
       // img1: "cloud://cloud1-6g2eaes788ded79b.636c-cloud1-6g2eaes788ded79b-1308659050/IMG_5750-transformed.jpg",
@@ -111,8 +97,6 @@ Page({
     console.log('radio发生change事件，携带value值为：', e.detail.value)
     console.log(e);
 
-    
-
     if (e.detail.value == "GBS") {
       this.setData({
         listArr : []
@@ -133,9 +117,11 @@ Page({
     })
   },
 
-  toDetails(){
+  toDetails(event){
+   
+    let index = event.currentTarget.dataset.index;
     wx.navigateTo({
-      url: '/pages/details/details'
+      url: '/pages/details/details?index=' + index,
     })
   }
 

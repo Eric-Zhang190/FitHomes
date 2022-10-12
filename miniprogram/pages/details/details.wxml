@@ -1,17 +1,9 @@
 <view class="detail-container">
   <swiper indicator-dots indicator-color="white" indicator-active-color="#ecf244">
-    <swiper-item>
-      <image mode="aspectFit" data-index="0" src="{{img1}}"></image>
+    <swiper-item wx:for="{{detailObj}}" wx:key="{{index}}">
+      <image mode="aspectFit" data-index="{{index}}" src="{{item}}" bindtap="previewImg"></image>
     </swiper-item>
-    <swiper-item>
-      <image mode="aspectFit" data-index="1" src="{{img2}}"></image>
-    </swiper-item>
-    <swiper-item>
-      <image mode="aspectFit" data-index="2" src="{{img3}}"></image>
-    </swiper-item>
-    <swiper-item>
-      <image mode="aspectFit" data-index="3" src="{{img4}}"></image>
-    </swiper-item>
+  
   </swiper>
 
   <view class="house-title">

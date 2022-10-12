@@ -1,6 +1,6 @@
 // pages/details/details.js
-Page({
 
+Page({
   /**
    * 页面的初始数据
    */
@@ -18,16 +18,64 @@ Page({
       {value: '不限男女'},
       {value: '有停车位'},
     ],
-    img1: "cloud://cloud1-6g2eaes788ded79b.636c-cloud1-6g2eaes788ded79b-1308659050/IMG_5750-transformed.jpg",
-    img2: "cloud://cloud1-6g2eaes788ded79b.636c-cloud1-6g2eaes788ded79b-1308659050/IMG_5751-transformed.jpg",
-    img3: "cloud://cloud1-6g2eaes788ded79b.636c-cloud1-6g2eaes788ded79b-1308659050/IMG_5763-transformed.jpg",
-    img4: "cloud://cloud1-6g2eaes788ded79b.636c-cloud1-6g2eaes788ded79b-1308659050/IMG_5757-transformed.jpg"
+    img: [
+      [
+        "cloud://cloud1-6g2eaes788ded79b.636c-cloud1-6g2eaes788ded79b-1308659050/6034_preview1.jpg",
+        "cloud://cloud1-6g2eaes788ded79b.636c-cloud1-6g2eaes788ded79b-1308659050/6034_preview2.jpg",
+        "cloud://cloud1-6g2eaes788ded79b.636c-cloud1-6g2eaes788ded79b-1308659050/6034_preview3.jpg",
+        "cloud://cloud1-6g2eaes788ded79b.636c-cloud1-6g2eaes788ded79b-1308659050/6034_preview4.jpg",
+        "cloud://cloud1-6g2eaes788ded79b.636c-cloud1-6g2eaes788ded79b-1308659050/6034_preview5.jpg",
+        "cloud://cloud1-6g2eaes788ded79b.636c-cloud1-6g2eaes788ded79b-1308659050/6034_preview6.jpg",
+        "cloud://cloud1-6g2eaes788ded79b.636c-cloud1-6g2eaes788ded79b-1308659050/6034_preview7.jpg",
+        "cloud://cloud1-6g2eaes788ded79b.636c-cloud1-6g2eaes788ded79b-1308659050/6034_preview8.jpg"
+      ],
+      [
+        "cloud://cloud1-6g2eaes788ded79b.636c-cloud1-6g2eaes788ded79b-1308659050/6002_preview1.jpg",
+        "cloud://cloud1-6g2eaes788ded79b.636c-cloud1-6g2eaes788ded79b-1308659050/6002_preview2.jpg",
+        "cloud://cloud1-6g2eaes788ded79b.636c-cloud1-6g2eaes788ded79b-1308659050/6002_preview3.jpg",
+        "cloud://cloud1-6g2eaes788ded79b.636c-cloud1-6g2eaes788ded79b-1308659050/6002_preview4.jpg",
+        "cloud://cloud1-6g2eaes788ded79b.636c-cloud1-6g2eaes788ded79b-1308659050/6002_preview5.jpg",
+        "cloud://cloud1-6g2eaes788ded79b.636c-cloud1-6g2eaes788ded79b-1308659050/6002_preview6.jpg",
+        "cloud://cloud1-6g2eaes788ded79b.636c-cloud1-6g2eaes788ded79b-1308659050/6002_preview7.jpg",
+        "cloud://cloud1-6g2eaes788ded79b.636c-cloud1-6g2eaes788ded79b-1308659050/6002_preview8.jpg"
+      ]
+    ],
+    imgArray: [
+      [
+      "cloud://cloud1-6g2eaes788ded79b.636c-cloud1-6g2eaes788ded79b-1308659050/6034_big1.jpg",
+      "cloud://cloud1-6g2eaes788ded79b.636c-cloud1-6g2eaes788ded79b-1308659050/6034_big2.jpg",
+      "cloud://cloud1-6g2eaes788ded79b.636c-cloud1-6g2eaes788ded79b-1308659050/6034_big3.jpg",
+      "cloud://cloud1-6g2eaes788ded79b.636c-cloud1-6g2eaes788ded79b-1308659050/6034_big4.jpg",
+      "cloud://cloud1-6g2eaes788ded79b.636c-cloud1-6g2eaes788ded79b-1308659050/6034_big5.jpg",
+      "cloud://cloud1-6g2eaes788ded79b.636c-cloud1-6g2eaes788ded79b-1308659050/6034_big6.jpg",
+      "cloud://cloud1-6g2eaes788ded79b.636c-cloud1-6g2eaes788ded79b-1308659050/6034_big7.jpg",
+      "cloud://cloud1-6g2eaes788ded79b.636c-cloud1-6g2eaes788ded79b-1308659050/6034_big8.jpg"
+    ],
+    [
+      "cloud://cloud1-6g2eaes788ded79b.636c-cloud1-6g2eaes788ded79b-1308659050/6002_big1.jpg",
+      "cloud://cloud1-6g2eaes788ded79b.636c-cloud1-6g2eaes788ded79b-1308659050/6002_big2.jpg",
+      "cloud://cloud1-6g2eaes788ded79b.636c-cloud1-6g2eaes788ded79b-1308659050/6002_big3.jpg",
+      "cloud://cloud1-6g2eaes788ded79b.636c-cloud1-6g2eaes788ded79b-1308659050/6002_big4.jpg",
+      "cloud://cloud1-6g2eaes788ded79b.636c-cloud1-6g2eaes788ded79b-1308659050/6002_big5.jpg",
+      "cloud://cloud1-6g2eaes788ded79b.636c-cloud1-6g2eaes788ded79b-1308659050/6002_big6.jpg",
+      "cloud://cloud1-6g2eaes788ded79b.636c-cloud1-6g2eaes788ded79b-1308659050/6002_big7.jpg",
+      "cloud://cloud1-6g2eaes788ded79b.636c-cloud1-6g2eaes788ded79b-1308659050/6002_big8.jpg"
+    ]
+    ],
+    detailObj: [],
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+
+    let index = options.index;
+
+    this.setData({
+      detailObj: this.data.img[index],
+      index  
+    })
 
   },
 
@@ -84,5 +132,15 @@ Page({
     wx.navigateTo({
       url: '/pages/appication/appication'
     })
+  },
+
+  previewImg: function(e) {
+        console.log(e);
+        let index = e.currentTarget.dataset.index;
+        let img = this.data.imgArray[index];
+        wx.previewImage({
+          current: img[index],
+          urls: img,
+        })
   }
 })

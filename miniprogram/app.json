@@ -1,10 +1,11 @@
 {
   "pages": [
     "pages/homepage/homepage",
-    "pages/appication/appication",
     "pages/details/details",
     "pages/list/list",
-    "pages/template/template"
+    "pages/appication/appication",
+    "pages/template/template",
+    "pages/Account/Account"
   ],
   "window": {
     "backgroundColor": "#F6F6F6",
@@ -20,14 +21,20 @@
       {
         "pagePath": "pages/homepage/homepage",
         "text": "主页",
-        "iconPath": "/icon/home.jpg",
-        "selectedIconPath": "/icon/home2.jpg"
+        "iconPath": "/icon/Home.png",
+        "selectedIconPath": "/icon/Home_Clicked.png"
       },
       {
         "pagePath": "pages/list/list",
         "text": "房源",
-        "iconPath": "/icon/details.png",
-        "selectedIconPath": "/icon/details.png"
+        "iconPath": "/icon/House.png",
+        "selectedIconPath": "/icon/House_Clicked.png"
+      },
+      {
+        "pagePath": "pages/Account/Account",
+        "text": "用户",
+        "iconPath": "/icon/User.png",
+        "selectedIconPath": "/icon/User_Clicked.png"
       }
     ]
   }

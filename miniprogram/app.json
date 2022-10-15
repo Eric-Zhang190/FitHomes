@@ -1,11 +1,12 @@
 {
   "pages": [
+    "pages/list/list",
     "pages/homepage/homepage",
     "pages/details/details",
-    "pages/list/list",
     "pages/appication/appication",
     "pages/template/template",
-    "pages/Account/Account"
+    "pages/Account/Account",
+    "pages/Saved/saved"
   ],
   "window": {
     "backgroundColor": "#F6F6F6",
@@ -29,6 +30,12 @@
         "text": "房源",
         "iconPath": "/icon/House.png",
         "selectedIconPath": "/icon/House_Clicked.png"
+      },
+      {
+        "pagePath": "pages/Saved/saved",
+        "text": "Favorite",
+        "iconPath": "/icon/Saved_Page.png",
+        "selectedIconPath": "/icon/Saved_Page.png"
       },
       {
         "pagePath": "pages/Account/Account",

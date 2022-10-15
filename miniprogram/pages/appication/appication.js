@@ -13,6 +13,7 @@ Page({
     index: null,
     pickerHidden: true,
     showTV: false,
+    showRental: false,
     chosen: '',
     array: ['整租', '分租'],
       objectArray: [
@@ -158,6 +159,26 @@ Page({
     // })
     this.setData({
       showTV: (!this.data.showTV)
+    })
+  },
+
+  handleRental: function() {
+    // var that = this;
+    // that.setData({
+    //   showTV: (!that.data.showTV)
+    // })
+    this.setData({
+      showRental: (!this.data.showRental)
+    })
+  },
+
+  handleRentalFalse: function() {
+    // var that = this;
+    // that.setData({
+    //   showTV: (!that.data.showTV)
+    // })
+    this.setData({
+      showRental: false
     })
   },
 

@@ -111,17 +111,17 @@
           <view class="page-section page-section-gap">
             <!-- <view class="section__title">设施服务</view> -->
             <radio-group name="可选租期" class="radio-group">
-              <label>
+              <label bindtap="handleRentalFalse">
                 <radio value="整租"  />整租
               </label>
-              <label>
-                <radio value="单间" bindtap="handleTv"/>单间
+              <label bindtap="handleRental">
+                <radio value="单间" />单间
               </label>
             </radio-group>
           </view>
         </view>
         <!-- </view> -->
-        <view class="{{showTV?'showtv_show':'showtv_hide'}} page-section">
+        <view class="{{showRental?'showtv_show':'showtv_hide'}} page-section">
           <view class="page-section-title">卧室选择</view>
           <radio-group name="吸尘器" class="radio-group">
             <label>
@@ -150,9 +150,9 @@
           <view class="page-section page-section-gap">
             <!-- <view class="section__title">设施服务</view> -->
             <checkbox-group name="设施服务" class="checkbox-group">
-              <label>
-                <!-- <checkbox value="家电" bindtap="handleTv" /> -->
-                <checkbox value="家电"/>家电
+              <label bindtap="handleTv">
+                <checkbox value="家电" />家电
+                <!-- <checkbox value="家电"/> -->
               </label>
               <label>
                 <checkbox value="床单被套" />床单被套
@@ -161,7 +161,7 @@
           </view>
         </view>
         <!-- </view> -->
-        <!-- <view class="{{showTV?'showtv_show':'showtv_hide'}}">
+        <view class="{{showTV?'showtv_show':'showtv_hide'}}">
           <view class="page-section-title" style="padding-top: 10px">吸尘器</view>
           <radio-group name="吸尘器" class="radio-group">
             <label>
@@ -174,7 +174,7 @@
               <radio class="radio-choice" value="吸尘器3" />吸尘器3
             </label>
            </radio-group>
-        </view> -->
+        </view>
        
         <view class="page-section">
           <view class="page-section-title">补充要求</view>

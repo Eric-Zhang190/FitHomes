@@ -137,7 +137,7 @@ Page({
   previewImg: function(e) {
         console.log(e);
         let index = e.currentTarget.dataset.index;
-        let img = this.data.imgArray[index];
+        let img = this.data.imgArray[0];
         wx.previewImage({
           current: img[index],
           urls: img,

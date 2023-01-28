@@ -1684,7 +1684,6 @@ Page({
       }
     }
 
-
   },
 
   handleClearAll() {

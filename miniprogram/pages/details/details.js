@@ -1,5 +1,8 @@
 // pages/details/details.js
 
+var app = getApp();
+
+
 Page({
   /**
    * 页面的初始数据
@@ -82,8 +85,20 @@ Page({
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
-  onReady: function () {
+  onReady: function (e) {
+    this.mapCtx = wx.createMapContext('myMap')
+  },
 
+  getCenterLocation: function () {
+    this.mapCtx.getCenterLocation({
+      success: function(res){
+        console.log(res.longitude)
+        console.log(res.latitude)
+      }
+    })
+  },
+  moveToLocation: function () {
+    this.mapCtx.moveToLocation()
   },
 
   /**
@@ -134,10 +149,18 @@ Page({
     })
   },
 
+  toTour(){
+    wx.navigateTo({
+      url: '/pages/Tour/tour'
+    })
+  },
+
   previewImg: function(e) {
-        console.log(e);
+        // console.log(e);
+        
         let index = e.currentTarget.dataset.index;
-        let img = this.data.imgArray[0];
+        let img = this.data.imgArray[app.globalData.outerIndex];
+       
         wx.previewImage({
           current: img[index],
           urls: img,

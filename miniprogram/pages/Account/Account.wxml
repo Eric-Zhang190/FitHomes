@@ -1,2 +1,18 @@
-<!--pages/Account/Account.wxml-->
-<text>pages/Account/Account.wxml</text>
+<!--pages/list/list.wxml-->
+<!-- <import src="/pages/template/template.wxml" /> -->
+
+<view class="user-container">
+  <view class="user-title">
+
+    <image src="../../icon/fit-logo-black-w-bg-transformed.png" class="avatar"></image>
+    <view class="userName"><text>Name</text></view>
+   
+    <view class="goStudy">欢迎来到FitHome</view>
+        
+
+    
+  </view>
+
+  
+
+</view>

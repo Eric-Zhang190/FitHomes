@@ -75,6 +75,14 @@
 
 .weui-cell {
   margin-left: 8px;
+  
+}
+
+.filter-input {
+  display: flex;
+  flex-direction: row;
+  border: 1px solid black;
+  border-radius: 10px;
 }
 
 .weui-cells_after-title radio .wx-radio-input.wx-radio-input-checked::before {
@@ -88,5 +96,14 @@
   background: #e6c171;
   transform: translate(-50%, -50%) scale(1);
   -webkit-transform: translate(-50%, -50%) scale(1);
+}
+
+.weui-input {
+  margin-top: 5px;
+  margin-left: 5px;
+}
+
+.filter-icon {
+  margin-top: 5px;
 }
 

@@ -1,0 +1,92 @@
+<view class="tour-container">
+  <form class="tour-form">
+    <view class="input-container">
+      <view class="input-section">
+        <view class="input-title"><text>姓名:</text></view>
+        <input class="input-body" auto-focus placeholder="姓名" />
+
+      </view>
+
+      <view class="input-section">
+        <view class="input-title"><text>电话:</text></view>
+        <input class="input-body" auto-focus placeholder="电话" />
+
+      </view>
+
+      <view class="input-section">
+        <view class="input-title"><text>邮箱:</text></view>
+        <input class="input-body" auto-focus placeholder="邮箱" />
+
+      </view>
+
+      <view class="input-section">
+        <text class="input-title">看房时间:</text>
+        <view class="input-date">
+          <input auto-focus placeholder="看房时间" />
+          <fui-icon name="calendar" class="filter-icon" size="{{36}}"></fui-icon>
+        </view>
+      </view>
+    </view>
+
+
+
+    <view class="btn-area">
+      <button type="primary" formType="submit" class="button-approve-font">提交看房</button>
+      <button formType="reset" class="button-cancel-font form-cancel">重新提交</button>
+    </view>
+
+
+
+  </form>
+
+
+  <view>
+    <view class="list-item log-post" bindtap="onClick" style="padding: 50rpx;">
+      <view class="cat-title">
+        <view class="topic-name">
+          <text>家电选项1</text>
+        </view>
+      </view>
+      <view style="display: flex; flex-direction: row;">
+        <view class="log-list">
+          <view class="log-items">
+            <image src="cloud://cloud1-6g2eaes788ded79b.636c-cloud1-6g2eaes788ded79b-1308659050/vacuum2.png" class="cover" mode="aspectFit" style="width: 180rpx;"></image>
+          </view>
+        </view>
+        <view style="display: flex; justify-content: center; align-items: center; margin-left: 20rpx;">
+          <text>产品名称：BISSELL Featherweight Stick Lightweight Bagless Vacuum with Crevice Tool, 2033M, Black</text>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view>
+    <bottomdialog id="bottomFrame" frameTitle="确定" bindmyConfirm="onConfirm" bindmyCancel="onCancel">
+      <scroll-view scroll-y="true" style="height: 700rpx; margin-bottom: 80rpx;">
+        <view class="list-item log-post">
+          <view class="cat-title">
+            <view class="topic-name">
+              <text>吸尘器1</text>
+            </view>
+          </view>
+          <view class="log-list">
+            <view class="log-items">
+              <image src="cloud://cloud1-6g2eaes788ded79b.636c-cloud1-6g2eaes788ded79b-1308659050/vacuum2.png" mode="aspectFit" class="cover"></image>
+            </view>
+          </view>
+        </view>
+
+        <view class="topic-content">
+          <view>产品介绍： </view>
+          <view>Powerful, convenient, and easy to use</view>
+          <view>Powerful suction makes it great for quick pick ups with multipurpose versatility</view>
+          <view>Versatile cleaning three machines in one: a stick vacuum, handle vacuum, and stair vacuum</view>
+          <view>With a crevice tool for furniture and a floor nozzle for stairs</view>
+          <view>Clean hard floors and surface dirt on carpets and area rugs. Surface Type: Counter Tops, Sealed Hard Floors, Low Pile Carpet. Dirt Cup Capacity: 0. 67 liter</view>
+          <view>Every Purchase Saves Pets</view>
+        </view>
+
+      </scroll-view>
+    </bottomdialog>
+  </view>
+
+</view>

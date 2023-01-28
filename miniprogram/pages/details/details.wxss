@@ -58,3 +58,13 @@ swiper image {
 .detail-icon {
   text-align:center;
 }
+
+.btn {
+  margin-top: 10px;
+}
+
+.detail_map {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

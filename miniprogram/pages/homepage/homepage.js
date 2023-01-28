@@ -6,9 +6,29 @@ Page({
    */
 
   data: {
+    headerList: [{
+        "id": "#",
+        "icon": "../../image/address.png",
+        "text": "寻找房源",
+        "url": "../list/list"
+      }
+      // {
+      //   "id": "#",
+      //   "icon": "../../image/qualifications.png",
+      //   "text": "水电单",
+      //   "url": "../../Companypackage/qualification/qualification"
+      // },
+      // {
+      //   "id": "#",
+      //   "icon": "../../image/relation.png",
+      //   "text": "用户登录",
+      //   "url": "../../Companypackage/Contact/Contact"
+      // }
+    ],
     img1: "cloud://cloud1-6g2eaes788ded79b.636c-cloud1-6g2eaes788ded79b-1308659050/fit logo white w bg.jpg",
     img2: "cloud://cloud1-6g2eaes788ded79b.636c-cloud1-6g2eaes788ded79b-1308659050/home-swiper2.jpg",
     swiperImgUrls: [
+      "cloud://cloud1-6g2eaes788ded79b.636c-cloud1-6g2eaes788ded79b-1308659050/fit logo black w bg (1).jpg",
       "cloud://cloud1-6g2eaes788ded79b.636c-cloud1-6g2eaes788ded79b-1308659050/home-swiper3 (1).jpg",
       "cloud://cloud1-6g2eaes788ded79b.636c-cloud1-6g2eaes788ded79b-1308659050/home-swiper5.jpg",
       "cloud://cloud1-6g2eaes788ded79b.636c-cloud1-6g2eaes788ded79b-1308659050/home-swiper4 (2).jpg",
@@ -16,14 +36,6 @@ Page({
     ],
     swiperIndex: 0
   },
-
-  // data: {
-  //   img1: "https://636c-cloud1-6g2eaes788ded79b-1308659050.tcb.qcloud.la/fit%20logo%20black%20w%20bg.png?sign=57c6f1a4803c0abbbc81a5f0cf599707&t=1662816494",
-  //   img2: "cloud://cloud1-6g2eaes788ded79b.636c-cloud1-6g2eaes788ded79b-1308659050/IMG_5750-transformed.jpg",
-  //   img3: "cloud://cloud1-6g2eaes788ded79b.636c-cloud1-6g2eaes788ded79b-1308659050/IMG_5751-transformed.jpg",
-  //   img4: "cloud://cloud1-6g2eaes788ded79b.636c-cloud1-6g2eaes788ded79b-1308659050/IMG_5763-transformed.jpg",
-  //   img5: "cloud://cloud1-6g2eaes788ded79b.636c-cloud1-6g2eaes788ded79b-1308659050/IMG_5757-transformed.jpg"
-  // },
 
   /**
    * 生命周期函数--监听页面加载
@@ -89,5 +101,13 @@ Page({
     that.setData({
       swiperIndex: e.detail.current,
     })
-  }
+  },
+
+  ToList: function () {
+    wx.switchTab({
+      url: '/pages/list/list'
+    });
+  },
+
+
 })

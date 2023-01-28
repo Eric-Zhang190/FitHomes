@@ -2,11 +2,13 @@
   "pages": [
     "pages/list/list",
     "pages/homepage/homepage",
-    "pages/details/details",
     "pages/appication/appication",
-    "pages/template/template",
+    "pages/Tour/tour",
+    "pages/details/details",
     "pages/Account/Account",
-    "pages/Saved/saved"
+    "pages/NewHomePage/newhomepage",
+    "pages/Saved/saved",
+    "pages/template/template"
   ],
   "window": {
     "backgroundColor": "#F6F6F6",
@@ -21,28 +23,20 @@
     "list": [
       {
         "pagePath": "pages/homepage/homepage",
-        "text": "主页",
-        "iconPath": "/icon/Home.png",
-        "selectedIconPath": "/icon/Home_Clicked.png"
+        "text": "首页",
+        "iconPath": "/icon/fithome-logo-white-2.png",
+        "selectedIconPath": "/icon/fithome-logo-white-2.png"
       },
       {
         "pagePath": "pages/list/list",
         "text": "房源",
         "iconPath": "/icon/House.png",
         "selectedIconPath": "/icon/House_Clicked.png"
-      },
-      {
-        "pagePath": "pages/Saved/saved",
-        "text": "Favorite",
-        "iconPath": "/icon/Saved_Page.png",
-        "selectedIconPath": "/icon/Saved_Page.png"
-      },
-      {
-        "pagePath": "pages/Account/Account",
-        "text": "用户",
-        "iconPath": "/icon/User.png",
-        "selectedIconPath": "/icon/User_Clicked.png"
       }
     ]
+  },
+  "usingComponents": {
+    "fui-dropdown-list": "components/firstui/fui-dropdown-list/fui-dropdown-list",
+    "fui-dropdown-menu": "/components/firstui/fui-dropdown-menu/fui-dropdown-menu"
   }
 }

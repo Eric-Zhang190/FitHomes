@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "bottomdialog":"../../components/bottomDialog/bottomDialog"
+  },
+  "navigationBarTitleText": "FitHome-申请看房"
+}

@@ -1,5 +1,6 @@
 // pages/list/list.js
 let datas = require('../../data/list-data.js');
+let ddlAssets;
 Page({
 
   /**
@@ -28,11 +29,23 @@ Page({
           ],
           "post_thumbnail_image": "cloud://cloud1-6g2eaes788ded79b.636c-cloud1-6g2eaes788ded79b-1308659050/6002_Overview.jpg",
         }
-      ]
-      // img1: "cloud://cloud1-6g2eaes788ded79b.636c-cloud1-6g2eaes788ded79b-1308659050/IMG_5750-transformed.jpg",
-      // img2: "cloud://cloud1-6g2eaes788ded79b.636c-cloud1-6g2eaes788ded79b-1308659050/IMG_5751-transformed.jpg",
-      // img3: "cloud://cloud1-6g2eaes788ded79b.636c-cloud1-6g2eaes788ded79b-1308659050/IMG_5763-transformed.jpg",
-      // img4: "cloud://cloud1-6g2eaes788ded79b.636c-cloud1-6g2eaes788ded79b-1308659050/IMG_5757-transformed.jpg"
+        
+      ],
+      options: [{
+        text: '机架式服务器',
+        value: 1
+      }, {
+        text: '笔记本',
+        value: 2
+      }, {
+        text: '平板电脑',
+        value: 3
+      }, {
+        text: '台式机+显示器',
+        value: 3
+      }],
+      assets: '',
+      assetsShow: false
   },
 
   /**
@@ -48,7 +61,7 @@ Page({
    * 生命周期函数--监听页面初次渲染完成
    */
   onReady: function () {
-
+    ddlAssets = this.selectComponent("#ddlAssets");
   },
 
   /**
@@ -118,10 +131,28 @@ Page({
   },
 
   toDetails(event){
-   
     let index = event.currentTarget.dataset.index;
     wx.navigateTo({
       url: '/pages/details/details?index=' + index,
+    })
+  },
+
+  assetsTap() {
+    ddlAssets && ddlAssets.show()
+    this.setData({
+      assetsShow: true
+    })
+  },
+  assetsItemClick(e) {
+    console.log(e.detail)
+    this.setData({
+      assets: e.detail.text
+    })
+    this.assetsClose()
+  },
+  assetsClose() {
+    this.setData({
+      assetsShow: false
     })
   }
 

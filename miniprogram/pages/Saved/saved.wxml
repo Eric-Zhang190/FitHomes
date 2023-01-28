@@ -1,5 +1,5 @@
 <!--pages/list/list.wxml-->
-<!-- <import src="/pages/template/template.wxml" /> -->
+
 
 <view class="listpage-container">
   <view class="page-section">
@@ -15,26 +15,16 @@
     <view class="filter-container">
       <view class="fitler-row"> 
         <view class="filter-row__container">
-          <text class=".filter-row__title">种类:</text>
-          <view class="filter-tag">Townhouse</view>
-          <view class="filter-tag">Apartment</view>
-          <view class="filter-tag">Condo</view>
-          <view class="filter-tag">Studio</view>
+          <text class=".filter-row__title">收藏时间:</text>
+          <view class="filter-input">
+            <input class="weui-input" auto-focus placeholder="请选择"/>
+            <fui-icon name="arrowdown" class="filter-icon" size="{{36}}"></fui-icon>
+          </view>
+          
+
+
+
         </view>
-        
-        
-        
-      </view>
-      <view class="fitler-row"> 
-        <view class="filter-row__container">
-          <text class=".filter-row__title">户型:</text>
-          <view class="filter-tag">1B1B</view>
-          <view class="filter-tag">2B1B</view>
-          <view class="filter-tag">3B1B</view>
-          <view class="filter-tag">5B3.5B</view>
-        </view>
-        
-        
         
       </view>
     </view>

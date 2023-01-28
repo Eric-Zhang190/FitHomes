@@ -1,118 +1,30 @@
 <!--pages/detail/detail.wxml-->
-<!-- <view class="detailContainer">
-  <image class="headImg" src="{{detailObj.detail_img}}"></image>
-  <view class="avatar_date">
-  <text>{{detailObj.date}}</text>
-  </view>
-  <text class="company">{{detailObj.title}}</text>
-
-  <view class="collection_share_container">
-    <view class="collection_share">
-      <image src="/icon/bookmark.png"></image>
-      <image src="/icon/share.png"></image>
-    </view>
-    <view class="line"></view>
-  </view>
-  <button>转发</button>
-  <text class="content">{{detailObj.detail_content}}</text>
-</view> -->
 
 <view class="container">
   <view class="page-body">
     <form catchsubmit="formSubmit" catchreset="formReset" class="form-body">
       <view class="form-section-title">
-        <text>基本信息</text>
+        <text>租房申请</text>
       </view>
 
       <view class="form-section">
 
-        <!-- //-- -->
-        <!-- <view class="page-section">
-          <view class="page-section-title">出租方式</view>
-          <picker bindchange="bindPickerChange" value="{{index}}" range="{{array}}">
-            <view class="picker">
-              {{array[index]}}
-            </view>
-          </picker>
-        </view> -->
-        <!-- //-- -->
-
-        <!-- <view class="page-section">
-          <view class="page-section-title" style="padding-top: 10px">房屋类型</view>
-          <radio-group name="房屋类型" class="radio-group">
-            <label>
-              <radio class="radio-choice" value="公寓" checked="true" />公寓
-            </label>
-            <label>
-              <radio class="radio-choice" value="联排" />联排
-            </label>
-            <label>
-              <radio class="radio-choice" value="独栋" />独栋
-            </label>
-          </radio-group>
-        </view>
-
-        <view class="page-section">
-          <view class="page-section-title">卧室数量</view>
-          <radio-group namclass="radio-choice" e="卧室数量" class="radio-group">
-            <label>
-              <radio class="radio-choice" value="卧室1个" checked="true" />1
-            </label>
-            <label>
-              <radio class="radio-choice" value="卧室2个" />2
-            </label>
-            <label>
-              <radio class="radio-choice" value="卧室3个" />3
-            </label>
-          </radio-group>
-        </view>
-
-        <view class="page-section page-section-gap">
-          <view class="page-section-title">卫生间数量</view>
-          <radio-group name="卫生间数量" class="radio-group">
-            <label>
-              <radio class="radio-choice" value="卫生间1个" checked="true" />1
-            </label>
-            <label>
-              <radio class="radio-choice" value="卫生间2个" />2
-            </label>
-            <label>
-              <radio class="radio-choice" value="卫生间3个" />3
-            </label>
-          </radio-group>
-        </view> -->
-
-
-        <!-- </view> -->
-
-        <!-- <view class="form-section"> -->
         <view class="page-section" style="margin-bottom: 5px">
-          <!-- <view class="section__title">请输入地址</view> -->
           <view class="page-section-title">
             <text>房源地址：<text class="title-address">6034 Westchester Park Dr.</text></text>
           </view>
-          <!-- <view class="weui-cells weui-cells_after-title">
-            <view class="weui-cell weui-cell_input">
-              <view class="weui-cell__bd" style="margin: 30rpx 0">
-                <input class="weui-input" name="补充要求" placeholder="请输入地址" />
-              </view>
-            </view>
-          </view> -->
-          <!-- <text class="house-address">6034 Westchester Park Dr. </text> -->
         </view>
-        <!-- </view> -->
 
         <!-- 租期 -->
         <view class="page-section">
           <view class="page-section-title">
             <text>租房形式</text>
           </view>
-          <!-- <view class="section__title">请输入地址</view> -->
+
           <view class="page-section page-section-gap">
-            <!-- <view class="section__title">设施服务</view> -->
             <radio-group name="可选租期" class="radio-group">
               <label bindtap="handleRentalFalse">
-                <radio value="整租"  />整租
+                <radio value="整租" />整租
               </label>
               <label bindtap="handleRental">
                 <radio value="单间" />单间
@@ -130,53 +42,44 @@
             <label>
               <radio class="radio-choice" value="侧卧" />侧卧
             </label>
-            </radio-group>
+          </radio-group>
         </view>
+
+        <!-- 租期 -->
+        <view class="page-section">
+          <view class="page-section-title">
+            <text>租期</text>
+          </view>
+
+          <view class="page-section page-section-gap">
+            <radio-group name="可选租期" class="radio-group-2">
+              <label>
+                <radio value="整租" />租期起始08.01，整年出租
+              </label>
+              <label>
+                <radio value="单间">
+                  <view class="radio-input"><text style="margin-right: 10rpx;">其他租期:</text><input class="weui-input" name="单租" ></input></view>
+                </radio>
+              </label>
+              <view class="housenote">
+                <image src="../../icon/chuzuicon.png" style="width: 30rpx; height: 30rpx; margin-right: 10rpx;" />
+                <text style="font-size: 25rpx;">优先整年出租申请</text>
+              </view>
+            </radio-group>
+          </view>
+        </view>
+
 
 
         <!-- 租期end-->
 
         <view class="page-section">
-          <view class="page-section-title">独立卫生间</view>
-          <switch name="是否独立卫生间" class="switch-space" />
+          <view class="page-section-title" style="padding-bottom: 0px !important;">希望独立卫生间</view>
+          <switch name="是否独立卫生间" />
         </view>
 
-        <!-- <view class="form-section"> -->
-        <view class="page-section">
-          <view class="page-section-title">
-            <text>设施服务</text>
-          </view>
-          <!-- <view class="section__title">请输入地址</view> -->
-          <view class="page-section page-section-gap">
-            <!-- <view class="section__title">设施服务</view> -->
-            <checkbox-group name="设施服务" class="checkbox-group">
-              <label bindtap="handleTv">
-                <checkbox value="家电" />家电
-                <!-- <checkbox value="家电"/> -->
-              </label>
-              <label>
-                <checkbox value="床单被套" />床单被套
-              </label>
-            </checkbox-group>
-          </view>
-        </view>
-        <!-- </view> -->
-        <view class="{{showTV?'showtv_show':'showtv_hide'}}">
-          <view class="page-section-title" style="padding-top: 10px">吸尘器</view>
-          <radio-group name="吸尘器" class="radio-group">
-            <label>
-              <radio class="radio-choice" value="吸尘器1" checked="true" />吸尘器1
-            </label>
-            <label>
-              <radio class="radio-choice" value="吸尘器2" />吸尘器2
-            </label>
-            <label>
-              <radio class="radio-choice" value="吸尘器3" />吸尘器3
-            </label>
-           </radio-group>
-        </view>
-       
-        <view class="page-section">
+
+        <!-- <view class="page-section">
           <view class="page-section-title">补充要求</view>
           <view class="weui-cells weui-cells_after-title">
             <view class="weui-cell weui-cell_input">
@@ -185,35 +88,188 @@
               </view>
             </view>
           </view>
+        </view> -->
+
+        <view class="page-section">
+          <view class="page-section-title">姓名</view>
+          <view class="weui-cells weui-cells_after-title">
+            <view class="weui-cell weui-cell_input">
+              <view class="weui-cell__bd">
+                <input class="weui-input" name="姓名" placeholder="姓名" />
+              </view>
+            </view>
+          </view>
+        </view>
+
+        <view class="page-section">
+          <view class="page-section-title">邮箱</view>
+          <view class="weui-cells weui-cells_after-title">
+            <view class="weui-cell weui-cell_input">
+              <view class="weui-cell__bd">
+                <input class="weui-input" name="邮箱" placeholder="邮箱" />
+              </view>
+            </view>
+          </view>
         </view>
 
       </view>
 
+
       <view class="form-section-title">
-        <text>联系方式</text>
+        <text>设施服务</text>
       </view>
 
       <view class="form-section">
         <view class="page-section">
-          <view class="section__title" style="font-weight: bold; padding-top: 10px;">电话</view>
-          <view class="weui-cells weui-cells_after-title">
-            <view class="weui-cell weui-cell_input">
-              <view class="weui-cell__bd" style="margin: 30rpx 0">
-                <input class="weui-input" name="补充要求" placeholder="请输入电话" />
-              </view>
-            </view>
+          <view class="page-section-title">
+            <text>家电选项</text>
           </view>
-          <view class="section__title" style="font-weight: bold;">邮箱</view>
-          <view class="weui-cells weui-cells_after-title">
-            <view class="weui-cell weui-cell_input">
-              <view class="weui-cell__bd" style="margin: 30rpx 0">
-                <input class="weui-input" name="补充要求" placeholder="请输入邮箱" />
+
+          <!-- <view class="page-section page-section-gap">
+            <checkbox-group name="设施服务" class="checkbox-group">
+              <label bindtap="handleTv">
+                <checkbox value="家电" />家电
+              </label>
+              <label>
+                <checkbox value="床单被套" />床单被套
+              </label>
+            </checkbox-group>
+          </view> -->
+
+          <view class="cates">
+            <view class="cates_container">
+              <!-- 左侧menu -->
+              <!-- <scroll-view scroll-y class="left_menu">
+                <view 
+                class="menu_item {{index===currentIndex?'menu_item-active':''}}" 
+                wx:for="{{leftMenuList}}" 
+                wx:key="*this"
+                bindtap="handleItemTap"
+                data-index="{{index}}"
+                >
+                  {{item}}
+                </view>
+              </scroll-view> -->
+
+              <view scroll-y class="left_menu">
+                <view class="menu_item {{index===currentIndex?'menu_item-active':''}}" wx:for="{{leftMenuList}}" wx:key="*this" bindtap="handleItemTap" data-index="{{index}}">
+                  {{item}}
+                </view>
               </view>
+              <view class="tagline"></view>
+
+              <!-- 右侧家电选项 -->
+              <scroll-view scroll-y class="right_menu">
+                <view class="goods_group" wx:for="{{rightContentNew}}" wx:for-index="index1" wx:for-item="item1" data-index="{{index}}">
+                  <view class="goods_title">
+                    <text class="title">{{item1.cate_name}}</text>
+                  </view>
+                  <view class="goods_list">
+                    <view class="navigator" wx:for="{{item1.children}}" wx:for-index="index2" wx:for-item="item2" wx:key="cate_id" bindtap="onClick" data-index="{{index}}">
+                      <image class="image" mode="widthFix" src="{{item2.cate_icon}}" alt="not found" />
+                      <view class="goods_name">{{item2.cate_name}}</view>
+                     
+                      <view class="bottom-dialog-box">
+                        <bottomdialog id="bottomFrame" frameTitle="添加" bindmyConfirm="onConfirm" bindmyCancel="onCancel">
+                          <scroll-view scroll-y="true" style="height: 700rpx; margin-bottom: 80rpx;">
+                            <view class="list-item log-post">
+                              <view class="cat-title">
+                                <view class="topic-name">
+                                  <text>{{item2.cate_name}}</text>
+                                </view>
+                              </view>
+                              <view class="log-list">
+                                <view class="log-items">
+                                  <image src="{{item2.cate_icon}}" mode="widthFix"></image>
+                                </view>
+                              </view>
+                            </view>
+
+                            <view class="topic-content">
+                              <view>产品介绍： </view>
+                              <view>Powerful, convenient, and easy to use</view>
+                              <view>Powerful suction makes it great for quick pick ups with multipurpose versatility</view>
+                              <view>Versatile cleaning three machines in one: a stick vacuum, handle vacuum, and stair vacuum</view>
+                              <view>With a crevice tool for furniture and a floor nozzle for stairs</view>
+                              <view>Clean hard floors and surface dirt on carpets and area rugs. Surface Type: Counter Tops, Sealed Hard Floors, Low Pile Carpet. Dirt Cup Capacity: 0. 67 liter</view>
+                              <view>Every Purchase Saves Pets</view>
+                            </view>
+
+                          </scroll-view>
+                        </bottomdialog>
+                      </view>
+
+
+                    </view>
+                  </view>
+                </view>
+              </scroll-view>
+            </view>
+
+
+
+
+            <!-- <view>
+              <bottomdialog id="bottomFrame" frameTitle="确定" bindmyConfirm="onConfirm" bindmyCancel="onCancel">
+                <scroll-view scroll-y="true" style="height: 700rpx; margin-bottom: 80rpx;">
+                  <view class="list-item log-post">
+                    <view class="cat-title">
+                      <view class="topic-name">
+                        <text>吸尘器1</text>
+                      </view>
+                    </view>
+                    <view class="log-list">
+                      <view class="log-items">
+                        <image src="cloud://cloud1-6g2eaes788ded79b.636c-cloud1-6g2eaes788ded79b-1308659050/vacuum2.png" mode="aspectFit" class="cover" style="height: 110px;"></image>
+                      </view>
+                    </view>
+                  </view>
+
+                  <view class="topic-content">
+                    <view>产品介绍： </view>
+                    <view>Powerful, convenient, and easy to use</view>
+                    <view>Powerful suction makes it great for quick pick ups with multipurpose versatility</view>
+                    <view>Versatile cleaning three machines in one: a stick vacuum, handle vacuum, and stair vacuum</view>
+                    <view>With a crevice tool for furniture and a floor nozzle for stairs</view>
+                    <view>Clean hard floors and surface dirt on carpets and area rugs. Surface Type: Counter Tops, Sealed Hard Floors, Low Pile Carpet. Dirt Cup Capacity: 0. 67 liter</view>
+                    <view>Every Purchase Saves Pets</view>
+                  </view>
+
+                </scroll-view>
+              </bottomdialog>
+            </view> -->
+
+          </view>
+
+
+          <!-- 租期 -->
+          <view class="page-section">
+            <view class="page-section-title">
+              <text>家政清洁</text>
+            </view>
+
+            <view class="page-section page-section-gap">
+              <radio-group name="可选租期" class="radio-group-2">
+                <label>
+                  <radio value="整租" />两周一次的清洁
+                </label>
+                <label>
+                  <radio value="整租" />一周一次的清洁
+                </label>
+                <view class="housenote">
+                  <image src="../../icon/chuzuicon.png" style="width: 30rpx; height: 30rpx; margin-right: 10rpx;" />
+                  <text style="font-size: 25rpx;">优先整年出租申请</text>
+                </view>
+              </radio-group>
             </view>
           </view>
 
         </view>
       </view>
+
+
+
+
 
       <view class="form-section-title">
         <text>备注</text>
@@ -223,8 +279,30 @@
         <view class="page-section">
 
           <view class="textarea-container">
-            <textarea class="textarea-input2" maxlength="140" placeholder="请输入房源详情"></textarea>
+            <textarea class="textarea-input2" maxlength="140"></textarea>
           </view>
+
+        </view>
+      </view>
+
+      <view class="form-section-title">
+        <text>联系我们</text>
+      </view>
+
+      <view class="form-section">
+        <view class="page-section">
+          <view class="page-section-title">
+            <text>Tips：</text>
+          </view>
+          <view style="margin-bottom: 20rpx;">
+            <text>请在提交申请前保存如下二维码，提交后扫码添加我们的微信客服并告知我们您的姓名。谢谢！</text>
+          </view>
+
+          <view class="page-section-title">
+            <image src="../../icon/QR.png" mode="aspectFit" bindtap="previewImg" />
+          </view>
+
+
 
         </view>
       </view>

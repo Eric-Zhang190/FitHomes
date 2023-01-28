@@ -3,45 +3,56 @@
 
 <view class="listpage-container">
   <view class="page-section">
-    <view>
+    <!-- <view>
       <radio-group bindchange="radioChange" class="weui-cells_after-title">
         <text class=".filter-row__title">地区:</text>
-        <label class="weui-cell weui-check__label" wx:for="{{items}}" wx:key="{{item.value}}">
+        <label class="weui-cell weui-check__label" wx:for="{{regionItems}}" wx:key="{{item.value}}">
           <radio value="{{item.value}}" checked="{{item.checked}}" />
           {{item.name}}
         </label>
       </radio-group>
-    </view>
+    </view> -->
+
     <view class="filter-container">
-      <view class="fitler-row"> 
-        <view class="filter-row__container">
-          <text class=".filter-row__title">种类:</text>
-          <view class="filter-tag">Townhouse</view>
-          <view class="filter-tag">Apartment</view>
-          <view class="filter-tag">Condo</view>
-          <view class="filter-tag">Studio</view>
+      <view class="filter-row">
+        <text class=".filter-row__title">学校:</text>
+        <view class="filter-row__container" wx:for="{{universityItems}}" wx:key="id">
+          <view class=" filter-tag {{index===currentIndexU?'show':''}}" catchtap="handleClickUniv" data-item="{{item.name}}" data-index="{{index}}">{{item.name}}</view>
         </view>
-        
-        
-        
       </view>
-      <view class="fitler-row"> 
-        <view class="filter-row__container">
-          <text class=".filter-row__title">户型:</text>
-          <view class="filter-tag">1B1B</view>
-          <view class="filter-tag">2B1B</view>
-          <view class="filter-tag">3B1B</view>
-          <view class="filter-tag">5B3.5B</view>
+
+      <view class="filter-row">
+        <text class=".filter-row__title">区域:</text>
+        <view class="filter-row__container" wx:for="{{regionItems}}" wx:key="id">
+          <view class=" filter-tag {{index===currentIndexR?'show':''}}" catchtap="handleClickRegion" data-item="{{item.name}}" data-index="{{index}}">{{item.name}}</view>
         </view>
-        
-        
-        
+      </view>
+
+      <view class="filter-row">
+        <text class=".filter-row__title">种类:</text>
+        <view class="filter-row__container" wx:for="{{typeItems}}" wx:key="id">
+          <view class=" filter-tag {{index===currentIndexT?'show':''}}" catchtap="handleClicktype" data-item="{{item.name}}" data-index="{{index}}">{{item.name}}</view>
+        </view>
+      </view>
+
+
+      <view class="fitler-row">
+        <view class="filter-row">
+          <text class=".filter-row__title">户型:</text>
+          <view class="filter-row__container" wx:for="{{modeItems}}" wx:key="id">
+            <view class=" filter-tag {{index===currentIndexM?'show':''}}" catchtap="handleClickMode" data-item="{{item.name}}" data-index="{{index}}">{{item.name}}</view>
+          </view>
+        </view>
+      </view>
+
+      <view>
+        <button bindtap="handleClearAll">Clear All</button>
       </view>
     </view>
   </view>
 
-  <view wx:key="{{index}}" wx:for="{{listArr}}" class="list-page" >
-    <view class="list-item log-post" catchtap="toDetails" data-index="{{index}}"> 
+  <view wx:key="{{index}}" wx:for="{{listArr}}" class="list-page">
+    <view class="list-item log-post" catchtap="toDetails" data-index="{{index}}">
       <view class="cat-title" data-item="{{item.title}}" data-id="{{item.id}}">
         <view class="topic-name">
           <text>{{item.title}}</text>
@@ -51,7 +62,7 @@
         <view class="log-list">
           <block wx:key="id" wx:for="{{postsList}}" wx:for-item='item_p' wx:if="{{item.id == item_p.categories}}">
             <view class="log-items">
-              <image src="{{item_p.post_thumbnail_image}}" mode="aspectFit" class="cover" ></image>
+              <image src="{{item_p.post_thumbnail_image}}" mode="aspectFill" class="cover"></image>
               <view class="content-title">
                 <text class="tit">{{item_p.title.rendered}}</text>
               </view>

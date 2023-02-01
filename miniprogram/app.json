@@ -1,12 +1,15 @@
 {
   "pages": [
-    "pages/homepage/homepage",
     "pages/appication_test/appication_test",
+    "pages/list/list",
+    "pages/details/details",
+    
+    "pages/homepage/homepage",
     "pages/appication/appication",
     "pages/test_component/test_component",
-    "pages/list/list",
+    
     "pages/Tour/tour",
-    "pages/details/details",
+   
     "pages/Account/Account",
     "pages/NewHomePage/newhomepage",
     "pages/Saved/saved",

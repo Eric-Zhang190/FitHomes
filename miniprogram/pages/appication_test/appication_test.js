@@ -5,6 +5,8 @@ const db=wx.cloud.database()
 
 let data_sample = require('../../data/goods_data_sample');
 
+var app = getApp();
+
 Page({
   data: {
     detailObj: {},
@@ -138,26 +140,6 @@ Page({
     })
   },
 
-  seekForIndex1(e) {
-    console.log('e.currentTarget.dataset', e.currentTarget.dataset);
-    const {
-      index1,
-      item1
-    } = e.currentTarget.dataset;
-    console.log('index1', index1);
-    console.log('item1', item1);
-  },
-
-  seekForIndex2(e) {
-    console.log('e.currentTarget.dataset', e.currentTarget.dataset);
-    const {
-      index2,
-      item2
-    } = e.currentTarget.dataset;
-    console.log('index2', index2);
-    console.log('item2', item2);
-  },
-
   onClick: function (e) {
     // console.log('e.currentTarget.dataset', e.currentTarget.dataset);
     const {
@@ -218,15 +200,15 @@ Page({
       console.log(res)
     })
 
-    // wx.navigateTo({
-    //   url: '/pages/details/details'
-    // });
+    wx.navigateTo({
+      url: '/pages/details/details?index=' + app.globalData.outerIndex,
+    });
 
-    // wx.showToast({
-    //   title: '成功',
-    //   icon: 'success',
-    //   duration: 2000
-    // })
+    wx.showToast({
+      title: '成功',
+      icon: 'success',
+      duration: 2000
+    })
   },
 
   formReset(e) {

@@ -197,36 +197,6 @@ Page({
 
   },
 
-  // radioChange(e) {
-  //   console.log('radio发生change事件，携带value值为：', e.detail.value)
-  //   console.log(e);
-
-
-  //   if (e.detail.value == "GBS") {
-  //     this.setData({
-  //       listArr : datas.list_data.filter(item => item.area== "GBS")
-  //     })
-  //   } else if (e.detail.value == "Westchester Park") {
-  //     this.setData({
-  //       listArr : datas.list_data.filter(item => item.area== "Westchester Park")
-  //     })
-  //   }
-  //   else {
-  //     this.setData({
-  //       listArr : datas.list_data
-  //     })
-  //   }
-
-  //   const items = this.data.items
-  //   for (let i = 0, len = items.length; i < len; ++i) {
-  //     items[i].checked = items[i].value === e.detail.value
-  //   }
-
-  //   this.setData({
-  //     items
-  //   })
-  // },
-
   toDetails(event) {
 
     let indexOuter = event.currentTarget.dataset.index;

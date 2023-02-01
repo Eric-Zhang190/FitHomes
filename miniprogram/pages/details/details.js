@@ -4,9 +4,6 @@ var app = getApp();
 
 
 Page({
-  /**
-   * 页面的初始数据
-   */
   data: {
     house1: [
       {value: 'Airbnb型公寓，设有大部分家具（床/床垫，沙发，餐桌椅，书桌椅等）欢迎拎包入住'},
@@ -66,6 +63,7 @@ Page({
     ]
     ],
     detailObj: [],
+    index: 0
   },
 
   /**
@@ -81,26 +79,6 @@ Page({
     })
 
   },
-
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
-  onReady: function (e) {
-    this.mapCtx = wx.createMapContext('myMap')
-  },
-
-  getCenterLocation: function () {
-    this.mapCtx.getCenterLocation({
-      success: function(res){
-        console.log(res.longitude)
-        console.log(res.latitude)
-      }
-    })
-  },
-  moveToLocation: function () {
-    this.mapCtx.moveToLocation()
-  },
-
   /**
    * 生命周期函数--监听页面显示
    */

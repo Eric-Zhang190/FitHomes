@@ -135,15 +135,20 @@
                         <image class="image" mode="widthFix" src="{{item2.cat_icon}}" alt="not found" />
                         <view class="goods_name">{{item2.cat_name}}</view>
 
-                        <view class="bottom-dialog-box">
-                        <bottomdialog id="bottomFrame" item2P2C="{{item2P2C}}" frameTitle="添加" bindmyConfirm="onConfirm" bindmyCancel="onCancel">
-                        </bottomdialog>
-                      </view>
+                        <!-- <view class="bottom-dialog-box">
+                          <bottomdialog id="bottomFrame" item2P2C="{{item2P2C}}" frameTitle="添加" bindmyConfirm="onConfirm" bindmyCancel="onCancel">
+                          </bottomdialog>
+                        </view> -->
 
                       </view>
                     </view>
                   </view>
                 </scroll-view>
+              </view>
+
+              <view class="bottom-dialog-box">
+                <bottomdialog id="bottomFrame" item2P2C="{{item2P2C}}" frameTitle="添加" bindmyConfirm="onConfirm" bindmyCancel="onCancel">
+                </bottomdialog>
               </view>
             </view>
 
@@ -155,15 +160,15 @@
             </view>
 
             <view class="chosed-item page-section page-section-gap" wx:for="{{chosedItem}}">
-                <view style="margin-right: 100rpx;">{{item}}</view>
-                <view><text class="cancel-button" data-index="{{index}}" bindtap="handleCancel">移除</text></view>
-             </view>
+              <view style="margin-right: 100rpx;">{{item}}</view>
+              <view><text class="cancel-button" data-index="{{index}}" bindtap="handleCancel">移除</text></view>
+            </view>
 
-            
+
           </view>
 
           <textarea name="已选家电" value="{{chosedItem}}" style="display: none;"></textarea>
-          
+
           <view style="margin-top: 50rpx;"></view>
 
           <!-- 租期 -->

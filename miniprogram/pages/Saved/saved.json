@@ -1,7 +1,6 @@
 {
   "usingComponents": {
-    "fui-dropdown-list": "../../components/firstui/fui-dropdown-list/fui-dropdown-list",
-      "fui-icon": "/components/firstui/fui-icon/fui-icon"
+
   },
   "navigationBarTitleText": "FitHome-Favorite"
 }

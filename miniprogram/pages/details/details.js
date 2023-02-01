@@ -145,7 +145,7 @@ Page({
 
   toDetails(){
     wx.navigateTo({
-      url: '/pages/appication/appication'
+      url: '/pages/appication_test/appication_test'
     })
   },
 

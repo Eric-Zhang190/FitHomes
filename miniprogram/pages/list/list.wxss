@@ -43,7 +43,8 @@
 }
 
 .show {
-  background-color: #e3e3dc;
+  /* background-color: #e3e3dc; */
+  background-color:red;
  
 }
 

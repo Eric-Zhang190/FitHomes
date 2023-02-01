@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "bottomdialog":"../../components/bottomDialog/bottomDialog",
+    "Tabs": "../../components/Tabs/Tabs"
+  }
+}

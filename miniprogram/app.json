@@ -1,8 +1,10 @@
 {
   "pages": [
     "pages/homepage/homepage",
-    "pages/list/list",
+    "pages/appication_test/appication_test",
     "pages/appication/appication",
+    "pages/test_component/test_component",
+    "pages/list/list",
     "pages/Tour/tour",
     "pages/details/details",
     "pages/Account/Account",
@@ -36,7 +38,6 @@
     ]
   },
   "usingComponents": {
-    "fui-dropdown-list": "components/firstui/fui-dropdown-list/fui-dropdown-list",
-    "fui-dropdown-menu": "/components/firstui/fui-dropdown-menu/fui-dropdown-menu"
+
   }
 }

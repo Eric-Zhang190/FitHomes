@@ -98,6 +98,34 @@ Page({
           1
         ],
         "post_thumbnail_image": "cloud://cloud1-6g2eaes788ded79b.636c-cloud1-6g2eaes788ded79b-1308659050/6002_Overview.jpg",
+      },
+      {
+        "id": 3,
+        "categories": [
+          2
+        ],
+        "post_thumbnail_image": "cloud://cloud1-6g2eaes788ded79b.636c-cloud1-6g2eaes788ded79b-1308659050/6002_Overview.jpg",
+      },
+      {
+        "id": 4,
+        "categories": [
+          3
+        ],
+        "post_thumbnail_image": "cloud://cloud1-6g2eaes788ded79b.636c-cloud1-6g2eaes788ded79b-1308659050/6002_Overview.jpg",
+      },
+      {
+        "id": 5,
+        "categories": [
+          4
+        ],
+        "post_thumbnail_image": "cloud://cloud1-6g2eaes788ded79b.636c-cloud1-6g2eaes788ded79b-1308659050/6002_Overview.jpg",
+      },
+      {
+        "id": 6,
+        "categories": [
+          5
+        ],
+        "post_thumbnail_image": "cloud://cloud1-6g2eaes788ded79b.636c-cloud1-6g2eaes788ded79b-1308659050/6002_Overview.jpg",
       }
     ],
     showList: false,
@@ -792,7 +820,7 @@ Page({
             return (
               item.area == "GBS" &&
               item.univ == this.data.univValue &&
-              item.type == this.data.typeValue
+              item.mode == this.data.modeValue
             )
           }),
           regionValue: typeItem,
@@ -1693,6 +1721,10 @@ Page({
       currentIndexR: null,
       currentIndexT: null,
       currentIndexM: null,
+      univValue: "UMD",
+      regionValue: "",
+      typeValue: "",
+      modeValue: "",
     })
 
   }

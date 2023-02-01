@@ -1,19 +1,21 @@
 // components/bottomDialog/bottomDialog.js
 Component({
   properties: {
-
+    item2P2C: {
+      type: Object,
+      value: {},
+    },
+    frameTitle: {
+      type: String,
+      value: '',
+    }
   },
   data: {
     flag:false,
     wrapAnimate:'wrapAnimate',
     bgOpacity:0,
     frameAnimate:'frameAnimate',
-  },
-  properties: {
-    frameTitle: {
-      type: String,
-      value: '标题',
-    }
+    item2P2C: {}
   },
   
   methods: {
@@ -32,7 +34,7 @@ Component({
       this.triggerEvent('myCancel');
     },
     
-    onConfirm(e){
+    onConfirm(e){      
       this.hideFrame(e);
       this.triggerEvent('myConfirm');
     },

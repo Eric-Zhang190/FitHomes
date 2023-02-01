@@ -6,9 +6,23 @@
       <!-- 头部 -->
       <view class='title-wrapper flex'>
         <view id='oncancle' catchtap='onCancle' class="title-cancle">取消</view>
-        <view id='onConfirm' catchtap= 'onConfirm' class="title-confirm">{{frameTitle}}</view>
+        <view id='onConfirm' catchtap='onConfirm' class="title-confirm">{{frameTitle}}</view>
       </view>
-      <!-- 内容 -->
+      <scroll-view scroll-y="true" style="height: 700rpx; margin-bottom: 80rpx;">
+        <view class="list-item log-post">
+          <view class="cat-title">
+            <view class="topic-name">
+              <text>{{item2P2C.cat_name}}</text>
+            </view>
+          </view>
+          <view class="log-list">
+            <view class="log-items">
+              <image src="{{item2P2C.cat_icon}}" mode="widthFix"></image>
+            </view>
+          </view>
+        </view>
+
+      </scroll-view>
       <slot></slot>
     </view>
   </view>

@@ -1,6 +1,6 @@
 // pages/details/detail.js
-let data = require('../../data/list-data');
-let showTV = true;
+// let data = require('../../data/list-data');
+// let showTV = true;
 
 Page({
   data: {
@@ -36,6 +36,16 @@ Page({
             "cate_id": 2,
             "cate_name": "曲面电视",
             "cate_icon": "cloud://cloud1-6g2eaes788ded79b.636c-cloud1-6g2eaes788ded79b-1308659050/tv2.png"
+          },
+          {
+            "cate_id": 3,
+            "cate_name": "Luxury",
+            "cate_icon": "cloud://cloud1-6g2eaes788ded79b.636c-cloud1-6g2eaes788ded79b-1308659050/tv2.png"
+          },
+          {
+            "cate_id": 4,
+            "cate_name": "Luxury2",
+            "cate_icon": "cloud://cloud1-6g2eaes788ded79b.636c-cloud1-6g2eaes788ded79b-1308659050/tv2.png"
           }
         ]
       },
@@ -50,6 +60,11 @@ Page({
           {
             "cate_id": 2,
             "cate_name": "中型号",
+            "cate_icon": "cloud://cloud1-6g2eaes788ded79b.636c-cloud1-6g2eaes788ded79b-1308659050/vaccum2-min.png"
+          },
+          {
+            "cate_id": 3,
+            "cate_name": "大型号",
             "cate_icon": "cloud://cloud1-6g2eaes788ded79b.636c-cloud1-6g2eaes788ded79b-1308659050/vaccum2-min.png"
           }
         ]
@@ -66,6 +81,11 @@ Page({
             "cate_id": 2,
             "cate_name": "餐具2",
             "cate_icon": "cloud://cloud1-6g2eaes788ded79b.636c-cloud1-6g2eaes788ded79b-1308659050/canju2-min.png"
+          },
+          {
+            "cate_id": 3,
+            "cate_name": "餐具3",
+            "cate_icon": "cloud://cloud1-6g2eaes788ded79b.636c-cloud1-6g2eaes788ded79b-1308659050/canju2-min.png"
           }
         ]
       },
@@ -81,7 +101,13 @@ Page({
             "cate_id": 2,
             "cate_name": "热水壶2",
             "cate_icon": "cloud://cloud1-6g2eaes788ded79b.636c-cloud1-6g2eaes788ded79b-1308659050/teapot2-min.png"
+          },
+          {
+            "cate_id": 3,
+            "cate_name": "热水壶3",
+            "cate_icon": "cloud://cloud1-6g2eaes788ded79b.636c-cloud1-6g2eaes788ded79b-1308659050/teapot2-min.png"
           }
+
         ]
       }
     ],
@@ -99,6 +125,16 @@ Page({
           "cate_name": "曲面电视",
           "cate_icon": "cloud://cloud1-6g2eaes788ded79b.636c-cloud1-6g2eaes788ded79b-1308659050/tv2.png"
         },
+        {
+          "cate_id": 3,
+          "cate_name": "luxury",
+          "cate_icon": "cloud://cloud1-6g2eaes788ded79b.636c-cloud1-6g2eaes788ded79b-1308659050/tv2.png"
+        },
+        {
+          "cate_id": 4,
+          "cate_name": "Luxury2",
+          "cate_icon": "cloud://cloud1-6g2eaes788ded79b.636c-cloud1-6g2eaes788ded79b-1308659050/tv2.png"
+        }
       ]
     }
   ],
@@ -126,11 +162,11 @@ Page({
    */
   onLoad: function (options) {
     // console.log(options);
-    let index = options.index;
-    this.setData({
-      detailObj: data.list_data[index],
-      index: index
-    })
+    // let index = options.index;
+    // this.setData({
+    //   detailObj: data.list_data[index],
+    //   index: index
+    // })
   },
   /**
    * 生命周期函数--监听页面初次渲染完成
@@ -214,33 +250,20 @@ Page({
 
   onClick: function (e) {
     let {
-      index
+      index2
     } = e.currentTarget.dataset;
-
-    const x = e.detail.x;
-
-    console.log("e is:", e);
     console.log("e.currentTarget.dataset is:", e.currentTarget.dataset);
-    
-    console.log("x is:", x);
-
-    if (x > 230 ) {
-      index = 1;
-    } else {
-      index = 0;
-    }
-    console.log("index is:", index);
+    console.log("index2 is:", index2);
 
 
-    let bottomContent = this.data.bottomContent.filter(item => item.cate_bid == index)
-    console.log("bottomContent is:", bottomContent);
+    // let bottomContent = this.data.bottomContent.filter(item => item.cate_bid == index2)
+    // console.log("bottomContent is:", bottomContent);
+    // console.log("bottomDialogIndex is:", this.data.bottomDialogIndex);
 
-    console.log("bottomDialogIndex is:", this.data.bottomDialogIndex);
-
-    this.setData({
-      bottomDialogIndex: index,
-      bottomContent
-    })
+    // this.setData({
+    //   bottomDialogIndex: index,
+    //   bottomContent
+    // })
 
     this.selectComponent('#bottomFrame').showFrame();
 

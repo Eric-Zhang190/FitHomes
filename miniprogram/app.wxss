@@ -25,3 +25,7 @@ page {
   flex-direction: column;
   justify-content: flex-start;
 }
+
+image {
+  width: 100%;
+}

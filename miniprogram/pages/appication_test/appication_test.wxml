@@ -22,7 +22,7 @@
           </view>
 
           <view class="page-section page-section-gap">
-            <radio-group name="可选租期" class="radio-group">
+            <radio-group name="租房形式" class="radio-group">
               <label bindtap="handleRentalFalse">
                 <radio value="整租" />整租
               </label>
@@ -35,7 +35,7 @@
         <!-- </view> -->
         <view class="{{showRental?'showtv_show':'showtv_hide'}} page-section">
           <view class="page-section-title">卧室选择</view>
-          <radio-group name="吸尘器" class="radio-group">
+          <radio-group name="卧室选择" class="radio-group">
             <label>
               <radio class="radio-choice" value="主卧" />主卧
             </label>
@@ -54,11 +54,11 @@
           <view class="page-section page-section-gap">
             <radio-group name="可选租期" class="radio-group-2">
               <label>
-                <radio value="整租" />租期起始08.01，整年出租
+                <radio value="整年出租" />租期起始08.01，整年出租
               </label>
               <label>
-                <radio value="单间">
-                  <view class="radio-input"><text style="margin-right: 10rpx;">其他租期:</text><input class="weui-input" name="单租" ></input></view>
+                <radio value="其他租期">
+                  <view class="radio-input"><text style="margin-right: 10rpx;">其他租期:</text><input class="weui-input" name="其他租期"></input></view>
                 </radio>
               </label>
               <view class="housenote">
@@ -75,20 +75,8 @@
 
         <view class="page-section">
           <view class="page-section-title" style="padding-bottom: 0px !important;">希望独立卫生间</view>
-          <switch name="是否独立卫生间" />
+          <switch name="是否希望独立卫生间" />
         </view>
-
-
-        <!-- <view class="page-section">
-          <view class="page-section-title">补充要求</view>
-          <view class="weui-cells weui-cells_after-title">
-            <view class="weui-cell weui-cell_input">
-              <view class="weui-cell__bd">
-                <input class="weui-input" name="补充要求" placeholder="补充要求" />
-              </view>
-            </view>
-          </view>
-        </view> -->
 
         <view class="page-section">
           <view class="page-section-title">姓名</view>
@@ -125,59 +113,61 @@
             <text>家电选项</text>
           </view>
 
-          <!-- <view class="page-section page-section-gap">
-            <checkbox-group name="设施服务" class="checkbox-group">
-              <label bindtap="handleTv">
-                <checkbox value="家电" />家电
-              </label>
-              <label>
-                <checkbox value="床单被套" />床单被套
-              </label>
-            </checkbox-group>
-          </view> -->
-
-          
-
           <view class="cates">
             <view class="cates_container">
-
-              <view scroll-y class="left_menu">
-                <view class="menu_item {{index===currentIndex?'menu_item-active':''}}" wx:for="{{leftMenuList}}" wx:key="*this" bindtap="handleItemTap" data-index="{{index}}">
-                  {{item}}
-                </view>
-              </view>
-              <view class="tagline"></view>
-
-       
-              <scroll-view scroll-y class="right_menu">
-                <view class="goods_group" wx:for="{{rightContentNew}}" wx:for-index="index1" wx:for-item="item1" data-index="{{index}}">
-                  <view class="goods_title">
-                    <text class="title">{{item1.cate_name}}</text>
+              <view class="left_menu_container">
+                <scroll-view scroll-x class="left_menu">
+                  <view class="menu_item {{index===currentIndex?'menu_item-active':''}}" wx:for="{{leftMenuList}}" wx:key="*this" bindtap="handleItemTap" data-index="{{index}}">
+                    {{item}}
                   </view>
-                  <view class="goods_list">
-                    <view class="navigator" wx:for="{{item1.children}}" wx:for-index="index2" wx:for-item="item2" wx:key="cate_id" bindtap="onClick" data-index2="{{index2}}">
-                      <image class="image" mode="widthFix" src="{{item2.cate_icon}}" alt="not found" />
-                      <view class="goods_name">{{item2.cate_name}}</view>
-                     
-                      <view class="bottom-dialog-box">
-                        <bottomdialog id="bottomFrame" frameTitle="添加" bindmyConfirm="onConfirm" bindmyCancel="onCancel">
+                </scroll-view>
+              </view>
+
+              <!-- <view class="tagline"></view> -->
+              <view class="right_menu_container">
+                <scroll-view scroll-y class="right_menu">
+                  <view class="goods_group" wx:for="{{rightContent}}" wx:for-index="index1" wx:for-item="item1" bindtap="seekForIndex1" data-index1="{{index1}}" data-item1="{{item1}}">
+                    <view class="goods_title">
+                      <text class="title">{{item1.cat_name}}</text>
+                    </view>
+                    <view class="goods_list">
+                      <view class="navigator" wx:for="{{item1.children}}" wx:for-index="index2" wx:for-item="item2" wx:key="cat_id" catchtap="onClick" data-index2="{{index2}}" data-item2="{{item2}}">
+                        <image class="image" mode="widthFix" src="{{item2.cat_icon}}" alt="not found" />
+                        <view class="goods_name">{{item2.cat_name}}</view>
+
+                        <view class="bottom-dialog-box">
+                        <bottomdialog id="bottomFrame" item2P2C="{{item2P2C}}" frameTitle="添加" bindmyConfirm="onConfirm" bindmyCancel="onCancel">
                         </bottomdialog>
                       </view>
 
-
+                      </view>
                     </view>
                   </view>
-                </view>
-              </scroll-view>
+                </scroll-view>
+              </view>
             </view>
 
           </view>
 
-          
+          <view class="page-section">
+            <view class="page-section-title">
+              <text>已选家电</text>
+            </view>
 
+            <view class="chosed-item page-section page-section-gap" wx:for="{{chosedItem}}">
+                <view style="margin-right: 100rpx;">{{item}}</view>
+                <view><text class="cancel-button" data-index="{{index}}" bindtap="handleCancel">移除</text></view>
+             </view>
+
+            
+          </view>
+
+          <textarea name="已选家电" value="{{chosedItem}}" style="display: none;"></textarea>
+          
+          <view style="margin-top: 50rpx;"></view>
 
           <!-- 租期 -->
-          <view class="page-section">
+          <!-- <view class="page-section">
             <view class="page-section-title">
               <text>家政清洁</text>
             </view>
@@ -196,7 +186,30 @@
                 </view>
               </radio-group>
             </view>
+          </view> -->
+
+
+          <view class="page-section">
+            <view class="page-section-title">
+              <text>家政清洁</text>
+            </view>
+
+            <view class="page-section page-section-gap">
+              <radio-group name="家政清洁" class="radio-group-2">
+                <label>
+                  <radio value="两周一次" />两周一次的清洁
+                </label>
+                <label>
+                  <radio value="一周一次" />一周一次的清洁
+                </label>
+                <view class="housenote">
+                  <image src="../../icon/chuzuicon.png" style="width: 30rpx; height: 30rpx; margin-right: 10rpx;" />
+                  <text style="font-size: 25rpx;">优先整年出租申请</text>
+                </view>
+              </radio-group>
+            </view>
           </view>
+
 
         </view>
       </view>
@@ -213,7 +226,7 @@
         <view class="page-section">
 
           <view class="textarea-container">
-            <textarea class="textarea-input2" maxlength="140"></textarea>
+            <textarea class="textarea-input2" maxlength="140" name="备注"></textarea>
           </view>
 
         </view>

@@ -1,0 +1,2 @@
+<!--pages/test_component/test_component.wxml-->
+<Tabs tabs="{{tabs}}" binditemChange="handleItemTap"></Tabs>

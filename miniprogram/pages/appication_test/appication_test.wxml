@@ -112,6 +112,15 @@
           <view class="page-section-title">
             <text>家电选项</text>
           </view>
+          <view class="housenote">
+            <image src="../../icon/chuzuicon.png" style="width: 30rpx; height: 30rpx; margin-right: 10rpx;" />
+            <text style="font-size: 25rpx;">FitHome会提供所有家电收据。</text>
+          </view>
+          <view class="housenote">
+            <image src="../../icon/chuzuicon.png" style="width: 30rpx; height: 30rpx; margin-right: 10rpx;" />
+            <text style="font-size: 25rpx;">请点击家电选项并选择添加按钮。若想移除选中家电请在“已选家电”列表中点击移除。</text>
+
+          </view>
 
           <view class="cates">
             <view class="cates_container">
@@ -209,7 +218,7 @@
                 </label>
                 <view class="housenote">
                   <image src="../../icon/chuzuicon.png" style="width: 30rpx; height: 30rpx; margin-right: 10rpx;" />
-                  <text style="font-size: 25rpx;">优先整年出租申请</text>
+                  <text style="font-size: 25rpx;">Townhouse包含家政清洁服务</text>
                 </view>
               </radio-group>
             </view>

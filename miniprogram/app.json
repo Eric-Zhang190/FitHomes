@@ -1,19 +1,20 @@
 {
   "pages": [
+    "pages/Login/login",
+    "pages/homepage/homepage",
+    "pages/User/user",
+    
     "pages/appication_test/appication_test",
     "pages/list/list",
     "pages/details/details",
-    
-    "pages/homepage/homepage",
     "pages/appication/appication",
     "pages/test_component/test_component",
-    
     "pages/Tour/tour",
-   
     "pages/Account/Account",
     "pages/NewHomePage/newhomepage",
     "pages/Saved/saved",
     "pages/template/template"
+    
   ],
   "window": {
     "backgroundColor": "#F6F6F6",
@@ -40,7 +41,5 @@
       }
     ]
   },
-  "usingComponents": {
-
-  }
+  "usingComponents": {}
 }

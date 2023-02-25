@@ -1,7 +1,7 @@
 // pages/details/detail.js
 // let data = require('../../data/list-data');
 // let showTV = true;
-const db=wx.cloud.database()
+const db = wx.cloud.database()
 
 let data_sample = require('../../data/goods_data_sample');
 
@@ -182,11 +182,22 @@ Page({
 
   formSubmit(res) {
     console.log(res);
-    var {租房形式, 卧室选择, 可选租期, 其他租期, 是否希望独立卫生间, 姓名, 邮箱, 家政清洁, 备注, 已选家电} = res.detail.value;
+    var {
+      租房形式,
+      卧室选择,
+      可选租期,
+      其他租期,
+      是否希望独立卫生间,
+      姓名,
+      邮箱,
+      家政清洁,
+      备注,
+      已选家电
+    } = res.detail.value;
     db.collection("dbHomes").add({
-      data:{
-        租房形式:租房形式,
-        卧室选择:卧室选择,
+      data: {
+        租房形式: 租房形式,
+        卧室选择: 卧室选择,
         可选租期: 可选租期,
         其他租期: 其他租期,
         是否希望独立卫生间: 是否希望独立卫生间,
@@ -196,7 +207,7 @@ Page({
         备注: 备注,
         已选家电: 已选家电,
       }
-    }).then(res=>{
+    }).then(res => {
       console.log(res)
     })
 
@@ -254,17 +265,17 @@ Page({
     })
   },
 
-  // backToDetails: function () {
-  //   wx.navigateTo({
-  //     url: '/pages/details/details'
-  //   });
+  backToDetails: function () {
+    wx.switchTab({
+      url: '/pages/list/list'
+    });
 
-  //   wx.showToast({
-  //     title: '成功',
-  //     icon: 'success',
-  //     duration: 2000
-  //   })
-  // },
+    wx.showToast({
+      title: '成功',
+      icon: 'success',
+      duration: 2000
+    })
+  },
 
 
   // onclick here
@@ -293,7 +304,7 @@ Page({
       title: '产品已经加入家电选项',
     })
     console.log('item2P2C name is:', this.data.item2P2C.cat_name);
-  
+
     let that = this;
     let chosedItemEle = this.data.item2P2C.cat_name;
     let chosedItem = that.data.chosedItem;
@@ -301,7 +312,7 @@ Page({
     if (!this.data.chosedItem.includes(chosedItemEle)) {
       chosedItem.push(chosedItemEle);
     }
-    
+
 
     // console.log('chosedItemEle is:', chosedItemEle);
     // console.log('chosed Item array is:', this.data.chosedItem)
@@ -324,16 +335,19 @@ Page({
 
   handleCancel(e) {
     console.log('handle cancel e is:', e);
-    const { index } = e.currentTarget.dataset;
+    const {
+      index
+    } = e.currentTarget.dataset;
 
     let that = this;
-  
+
     let chosedItemEleIndex = index;
-   
-    let chosedItem = that.data.chosedItem.filter((item, index1)=> { 
-      console.log('index1' , index1);
-      return chosedItemEleIndex != index1; })
-    
+
+    let chosedItem = that.data.chosedItem.filter((item, index1) => {
+      console.log('index1', index1);
+      return chosedItemEleIndex != index1;
+    })
+
     this.setData({
       chosedItem
     })

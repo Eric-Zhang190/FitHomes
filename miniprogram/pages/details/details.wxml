@@ -48,6 +48,6 @@
 
 
 
-  <button type="primary" catchtap="toDetails" class="btn">申请房源/看房</button>
+  <button type="primary" catchtap="toDetails" class="btn" style="margin-bottom: 200rpx;">申请房源/看房</button>
   <!-- <button type="primary" catchtap="toTour" class="btn">申请看房</button> -->
 </view>

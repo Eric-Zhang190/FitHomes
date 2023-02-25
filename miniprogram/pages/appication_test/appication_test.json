@@ -2,5 +2,6 @@
   "usingComponents": {
     "bottomdialog":"../../components/bottomDialog/bottomDialog",
     "Tabs": "../../components/Tabs/Tabs"
-  }
+  },
+  "navigationBarTitleText": "房源申请"
 }

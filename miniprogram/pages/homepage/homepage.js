@@ -109,5 +109,12 @@ Page({
     });
   },
 
+  toUsers: function() {
+    console.log("123")
+    wx.navigateTo({
+      url: '/pages/User/user',
+    })
+  }
+
 
 })

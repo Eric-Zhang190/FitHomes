@@ -3,10 +3,7 @@ let goods_data = [
   {
     "cat_id": 1,
     "cat_name": "娱乐设施",
-    "cat_pid": 0,
     "cat_level": 0,
-    "cat_deleted": false,
-    "cat_icon": "",
     "children": [{
       "cat_id": 3,
       "cat_name": "电视",

@@ -338,8 +338,8 @@ Page({
   },
 
   backToDetails: function () {
-    wx.navigateTo({
-      url: '/pages/details/details'
+    wx.switchTab({
+      url: '/pages/list/list'
     });
 
     wx.showToast({

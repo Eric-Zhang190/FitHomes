@@ -1,4 +1,4 @@
-// pages/Login/login.js
+// pages/me/me.js
 Page({
 
   /**

@@ -1,4 +1,4 @@
-// pages/Login/login.js
+// pages/ServiceHistory/service_history.js
 Page({
 
   /**

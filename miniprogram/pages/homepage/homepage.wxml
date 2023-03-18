@@ -50,10 +50,6 @@
       </view>
     </view>
 
-    <view class="touser" bindtap="toUsers">
-    <button>登录</button>
-    </view>
-
 
 
   </view>

@@ -1,9 +1,12 @@
 {
   "pages": [
-    "pages/Login/login",
-    "pages/homepage/homepage",
+    "pages/ServiceApplication/service_application",
     "pages/User/user",
-    
+    "pages/homepage/homepage",
+    "pages/login3/login3",
+    "pages/login2/index",
+    "pages/me/me",
+    "pages/Login/login",
     "pages/appication_test/appication_test",
     "pages/list/list",
     "pages/details/details",
@@ -13,7 +16,8 @@
     "pages/Account/Account",
     "pages/NewHomePage/newhomepage",
     "pages/Saved/saved",
-    "pages/template/template"
+    "pages/template/template",
+    "pages/ServiceHistory/service_history"
     
   ],
   "window": {

@@ -1,0 +1,9 @@
+<view>
+<button class="avatar-wrapper" open-type="chooseAvatar" bindchooseavatar="onChooseAvatar">
+  <image class="avatar" src="{{avatarUrl}}"></image></button> 
+
+<input type="nickname" model:value="{{nickName}}" class="weui-input" placeholder="请输入昵称"/>
+
+<button bindtap="loginSys">登录</button>
+</view>
+

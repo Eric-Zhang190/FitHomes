@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "bottomdialog":"../../components/bottomDialog/bottomDialog",
+    "Tabs": "../../components/Tabs/Tabs"
+  },
+  "navigationBarTitleText": "报修申请"
+}

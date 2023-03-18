@@ -1,4 +1,2 @@
-<!-- <button type="primary" plain open-type="getUserInfo" bindgetuserinfo="handleGetUserInfo">登录</button> -->
-
-
-<button type="primary" bindgetuserinfo="handleGetUserInfo">登录</button>
+<!--pages/Login/login.wxml-->
+<text>pages/Login/login.wxml</text>

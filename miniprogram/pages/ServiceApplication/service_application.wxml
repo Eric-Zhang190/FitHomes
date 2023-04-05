@@ -4,234 +4,59 @@
   <view class="page-body">
     <form catchsubmit="formSubmit" catchreset="formReset" class="form-body">
       <view class="form-section-title">
-        <text>租房申请</text>
+        <text>报修申请</text>
       </view>
 
       <view class="form-section">
 
         <view class="page-section" style="margin-bottom: 5px">
           <view class="page-section-title">
-            <text>房源地址：<text class="title-address">6034 Westchester Park Dr.</text></text>
+            <text>房源地址：<text class="title-address">自动从数据库抽取</text></text>
           </view>
         </view>
 
         <!-- 租期 -->
         <view class="page-section">
           <view class="page-section-title">
-            <text>租房形式</text>
+            <text>所在小区</text>
           </view>
 
           <view class="page-section page-section-gap">
-            <radio-group name="租房形式" class="radio-group">
+            <radio-group name="所在小区" class="radio-group">
               <label bindtap="handleRentalFalse">
-                <radio value="整租" />整租
+                <radio value="Westchester" />Westchester Park
               </label>
               <label bindtap="handleRental">
-                <radio value="单间" />单间
+                <radio value="Oasis" />Oasis
               </label>
             </radio-group>
           </view>
         </view>
-        <!-- </view> -->
-        <view class="{{showRental?'showtv_show':'showtv_hide'}} page-section">
-          <view class="page-section-title">卧室选择</view>
-          <radio-group name="卧室选择" class="radio-group">
-            <label>
-              <radio class="radio-choice" value="主卧" />主卧
-            </label>
-            <label>
-              <radio class="radio-choice" value="侧卧" />侧卧
-            </label>
-          </radio-group>
-        </view>
-
-        <!-- 租期 -->
-        <view class="page-section">
-          <view class="page-section-title">
-            <text>租期</text>
-          </view>
-
-          <view class="page-section page-section-gap">
-            <radio-group name="可选租期" class="radio-group-2">
-              <label>
-                <radio value="整年出租" />租期起始08.01，整年出租
-              </label>
-              <label>
-                <radio value="其他租期">
-                  <view class="radio-input"><text style="margin-right: 10rpx;">其他租期:</text><input class="weui-input" name="其他租期"></input></view>
-                </radio>
-              </label>
-              <view class="housenote">
-                <image src="../../icon/chuzuicon.png" style="width: 30rpx; height: 30rpx; margin-right: 10rpx;" />
-                <text style="font-size: 25rpx;">优先整年出租申请</text>
-              </view>
-            </radio-group>
-          </view>
-        </view>
-
-
-
-        <!-- 租期end-->
 
         <view class="page-section">
-          <view class="page-section-title" style="padding-bottom: 0px !important;">希望独立卫生间</view>
-          <switch name="是否希望独立卫生间" />
-        </view>
-
-        <view class="page-section">
-          <view class="page-section-title">姓名</view>
+          <view class="page-section-title">报修问题</view>
           <view class="weui-cells weui-cells_after-title">
             <view class="weui-cell weui-cell_input">
               <view class="weui-cell__bd">
-                <input class="weui-input" name="姓名" placeholder="姓名" />
+                <input class="weui-input" name="报修问题" placeholder="报修问题" />
               </view>
             </view>
           </view>
         </view>
 
         <view class="page-section">
-          <view class="page-section-title">邮箱</view>
+          <view class="page-section-title">报修描述</view>
           <view class="weui-cells weui-cells_after-title">
             <view class="weui-cell weui-cell_input">
               <view class="weui-cell__bd">
-                <input class="weui-input" name="邮箱" placeholder="邮箱" />
+                <input class="weui-input" name="报修描述" placeholder="报修描述" />
               </view>
             </view>
           </view>
         </view>
 
       </view>
-
-
-      <view class="form-section-title">
-        <text>设施服务</text>
-      </view>
-
-      <view class="form-section">
-        <view class="page-section">
-          <view class="page-section-title">
-            <text>家电选项</text>
-          </view>
-          <view class="housenote">
-            <image src="../../icon/chuzuicon.png" style="width: 30rpx; height: 30rpx; margin-right: 10rpx;" />
-            <text style="font-size: 25rpx;">FitHome会提供所有家电收据。</text>
-          </view>
-          <view class="housenote">
-            <image src="../../icon/chuzuicon.png" style="width: 30rpx; height: 30rpx; margin-right: 10rpx;" />
-            <text style="font-size: 25rpx;">请点击家电选项并选择添加按钮。若想移除选中家电请在“已选家电”列表中点击移除。</text>
-
-          </view>
-
-          <view class="cates">
-            <view class="cates_container">
-              <view class="left_menu_container">
-                <scroll-view scroll-x class="left_menu">
-                  <view class="menu_item {{index===currentIndex?'menu_item-active':''}}" wx:for="{{leftMenuList}}" wx:key="*this" bindtap="handleItemTap" data-index="{{index}}">
-                    {{item}}
-                  </view>
-                </scroll-view>
-              </view>
-
-              <!-- <view class="tagline"></view> -->
-              <view class="right_menu_container">
-                <scroll-view scroll-y class="right_menu">
-                  <view class="goods_group" wx:for="{{rightContent}}" wx:for-index="index1" wx:for-item="item1" bindtap="seekForIndex1" data-index1="{{index1}}" data-item1="{{item1}}">
-                    <view class="goods_title">
-                      <text class="title">{{item1.cat_name}}</text>
-                    </view>
-                    <view class="goods_list">
-                      <view class="navigator" wx:for="{{item1.children}}" wx:for-index="index2" wx:for-item="item2" wx:key="cat_id" catchtap="onClick" data-index2="{{index2}}" data-item2="{{item2}}">
-                        <image class="image" mode="widthFix" src="{{item2.cat_icon}}" alt="not found" />
-                        <view class="goods_name">{{item2.cat_name}}</view>
-
-                        <!-- <view class="bottom-dialog-box">
-                          <bottomdialog id="bottomFrame" item2P2C="{{item2P2C}}" frameTitle="添加" bindmyConfirm="onConfirm" bindmyCancel="onCancel">
-                          </bottomdialog>
-                        </view> -->
-
-                      </view>
-                    </view>
-                  </view>
-                </scroll-view>
-              </view>
-
-              <view class="bottom-dialog-box">
-                <bottomdialog id="bottomFrame" item2P2C="{{item2P2C}}" frameTitle="添加" bindmyConfirm="onConfirm" bindmyCancel="onCancel">
-                </bottomdialog>
-              </view>
-            </view>
-
-          </view>
-
-          <view class="page-section">
-            <view class="page-section-title">
-              <text>已选家电</text>
-            </view>
-
-            <view class="chosed-item page-section page-section-gap" wx:for="{{chosedItem}}">
-              <view style="margin-right: 100rpx;">{{item}}</view>
-              <view><text class="cancel-button" data-index="{{index}}" bindtap="handleCancel">移除</text></view>
-            </view>
-
-
-          </view>
-
-          <textarea name="已选家电" value="{{chosedItem}}" style="display: none;"></textarea>
-
-          <view style="margin-top: 50rpx;"></view>
-
-          <!-- 租期 -->
-          <!-- <view class="page-section">
-            <view class="page-section-title">
-              <text>家政清洁</text>
-            </view>
-
-            <view class="page-section page-section-gap">
-              <radio-group name="可选租期" class="radio-group-2">
-                <label>
-                  <radio value="整租" />两周一次的清洁
-                </label>
-                <label>
-                  <radio value="整租" />一周一次的清洁
-                </label>
-                <view class="housenote">
-                  <image src="../../icon/chuzuicon.png" style="width: 30rpx; height: 30rpx; margin-right: 10rpx;" />
-                  <text style="font-size: 25rpx;">优先整年出租申请</text>
-                </view>
-              </radio-group>
-            </view>
-          </view> -->
-
-
-          <view class="page-section">
-            <view class="page-section-title">
-              <text>家政清洁</text>
-            </view>
-
-            <view class="page-section page-section-gap">
-              <radio-group name="家政清洁" class="radio-group-2">
-                <label>
-                  <radio value="两周一次" />两周一次的清洁
-                </label>
-                <label>
-                  <radio value="一周一次" />一周一次的清洁
-                </label>
-                <view class="housenote">
-                  <image src="../../icon/chuzuicon.png" style="width: 30rpx; height: 30rpx; margin-right: 10rpx;" />
-                  <text style="font-size: 25rpx;">Townhouse包含家政清洁服务</text>
-                </view>
-              </radio-group>
-            </view>
-          </view>
-
-
-        </view>
-      </view>
-
-
-
-
-
+      
       <view class="form-section-title">
         <text>备注</text>
       </view>

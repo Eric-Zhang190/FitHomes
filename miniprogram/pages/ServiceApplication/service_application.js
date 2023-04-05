@@ -181,38 +181,26 @@ Page({
   },
 
   formSubmit(res) {
-    console.log(res);
+    console.log(res.detail.value);
     var {
-      租房形式,
-      卧室选择,
-      可选租期,
-      其他租期,
-      是否希望独立卫生间,
-      姓名,
-      邮箱,
-      家政清洁,
+      所在小区,
+      报修描述,
+      报修问题,
       备注,
-      已选家电
     } = res.detail.value;
-    db.collection("dbHomes").add({
+    db.collection("service_details").add({
       data: {
-        租房形式: 租房形式,
-        卧室选择: 卧室选择,
-        可选租期: 可选租期,
-        其他租期: 其他租期,
-        是否希望独立卫生间: 是否希望独立卫生间,
-        姓名: 姓名,
-        邮箱: 邮箱,
-        家政清洁: 家政清洁,
-        备注: 备注,
-        已选家电: 已选家电,
+        service_area: 所在小区,
+        service_detail: 报修描述,
+        service_title: 报修问题,
+        service_note: 备注,
       }
     }).then(res => {
       console.log(res)
     })
 
-    wx.navigateTo({
-      url: '/pages/details/details?index=' + app.globalData.outerIndex,
+    wx.switchTab({
+      url: '/pages/Login/login',
     });
 
     wx.showToast({
@@ -266,9 +254,9 @@ Page({
   },
 
   backToDetails: function () {
-    wx.switchTab({
-      url: '/pages/list/list'
-    });
+    // wx.switchTab({
+    //   url: '/pages/list/list'
+    // });
 
     wx.showToast({
       title: '成功',

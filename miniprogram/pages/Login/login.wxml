@@ -1,2 +1,53 @@
-<!--pages/Login/login.wxml-->
-<text>pages/Login/login.wxml</text>
+<view class="user_info_wrap">
+  <button class="avatar-wrapper" open-type="chooseAvatar" bind:chooseavatar="onChooseAvatar">
+    <image class="avatar" src="{{avatarUrl}}"></image>
+  </button>
+  <input type="nickname" model:value="{{nickName}}" class="weui-input" placeholder="请输入昵称" />
+  <button bindtap="loginSys">登录</button>
+</view>
+
+<view class="navigator-container">
+
+<button bindtap="toIndex">回到主页</button>
+<button bindtap="toHousing">寻找房源</button>
+
+</view>
+<view class="user_content"> 
+  <view class="user_main">
+    <view class="history_wrap">
+      <navigator>
+        <view class="his_num">0</view>
+        <view class="his_name">收藏的房源</view>
+      </navigator>
+      <navigator>
+        <view class="his_num">0</view>
+        <view class="his_name">申请看房</view>
+      </navigator>
+      <navigator>
+        <view class="his_num">0</view>
+        <view class="his_name">收藏的房源</view>
+      </navigator>
+      <navigator>
+        <view class="his_num">0</view>
+        <view class="his_name">我的报修</view>
+      </navigator>
+    </view>
+    <view class="orders_wrap">
+      <view class="orders_title">我的报修</view>
+      <view class="orders_content">
+        <navigator bindtap="handleApplyService">
+          <view class="order_icon"></view>
+          <view class="order_name">申请报修</view>
+        </navigator>
+        <navigator bindtap="handleMyService">
+          <view class="order_icon"></view>
+          <view class="order_name">目前报修</view>
+        </navigator>
+        <navigator bindtap="handleServiceHistory">
+          <view class="order_icon"></view>
+          <view class="order_name">报修历史</view>
+        </navigator>
+      </view>
+    </view>
+  </view>
+</view>

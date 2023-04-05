@@ -1,12 +1,10 @@
 {
   "pages": [
-    "pages/ServiceApplication/service_application",
     "pages/User/user",
-    "pages/homepage/homepage",
-    "pages/login3/login3",
-    "pages/login2/index",
-    "pages/me/me",
     "pages/Login/login",
+    "pages/homepage/homepage",
+    "pages/ServiceHistory/service_history",
+    "pages/ServiceApplication/service_application",
     "pages/appication_test/appication_test",
     "pages/list/list",
     "pages/details/details",
@@ -14,11 +12,9 @@
     "pages/test_component/test_component",
     "pages/Tour/tour",
     "pages/Account/Account",
-    "pages/NewHomePage/newhomepage",
     "pages/Saved/saved",
     "pages/template/template",
-    "pages/ServiceHistory/service_history"
-    
+    "pages/MyService/my_service"
   ],
   "window": {
     "backgroundColor": "#F6F6F6",
@@ -40,6 +36,12 @@
       {
         "pagePath": "pages/list/list",
         "text": "房源",
+        "iconPath": "/icon/House.png",
+        "selectedIconPath": "/icon/House_Clicked.png"
+      },
+      {
+        "pagePath": "pages/Login/login",
+        "text": "个人中心",
         "iconPath": "/icon/House.png",
         "selectedIconPath": "/icon/House_Clicked.png"
       }

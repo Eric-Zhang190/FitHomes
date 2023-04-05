@@ -9,6 +9,7 @@ App({
       wx.cloud.init({
         env:"cloud1-6g2eaes788ded79b"
       });
+      
     }
   // //
   //   const logs = wx.getStorageSync('logs') || []

@@ -41,7 +41,7 @@
   },
   "appid": "wxcdc14778036cfc30",
   "projectname": "FitHomesMiniApp",
-  "libVersion": "2.14.1",
+  "libVersion": "2.30.2",
   "cloudfunctionTemplateRoot": "cloudfunctionTemplate",
   "condition": {
     "search": {
